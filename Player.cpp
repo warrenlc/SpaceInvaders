@@ -5,14 +5,19 @@
 #include "Missile.h"
 #include "point.h"
 
-Player::Player(sf::Vector2f pos, int life)
-: Moving_Object(pos), life{life}{}
+Player::Player(sf::Vector2f pos)
+: Moving_Object(pos){
+    //position = {550, 750};
+    life = 3;
+    sf::Texture player_texture;
+    player_texture.loadFromFile("player.png");
+    sf::Vector2f player_texture_size{player_texture.getSize()};
+    sf::RectangleShape player{player_texture_size};
+    player.setTexture(&player_texture);
+    player.setOrigin(player_texture_size / 2.0f);
 
-sf::Vector2f player_texture_size{player_texture.getSize()};
-sf::RectangleShape player{player_texture_size};
-player.setTexture(&player_texture);
-player.setOrigin(player_texture_size / 2.0f);
-sf::Vector2f playerLocation{550, 750};
+}
+
 void Player::shoot() {
     Missile *missile = new Missile{position};
 }
@@ -25,3 +30,4 @@ void Player::move() {
 
     normalize(position);
 }
+

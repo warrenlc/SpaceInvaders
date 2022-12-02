@@ -5,11 +5,11 @@
 #ifndef SPACE_INVADERS_PLAYER_H
 #define SPACE_INVADERS_PLAYER_H
 #include "Moving_Object.h"
-class Player : public Moving_Object {
+class Player : public Moving_Object , public sf::Drawable{
 private:
     int life;
 public:
-    Player(sf::Vector2f pos, int life);
+    Player(sf::Vector2f pos, //skicka med texture*);
     ~Player() = default;
 
     void shoot();

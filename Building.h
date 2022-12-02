@@ -3,13 +3,13 @@
 //
 
 
-#include "Object.h"
+#include "Game_Object.h"
 
 
 #ifndef SPACE_INVADERS_BUILDING_H
 #define SPACE_INVADERS_BUILDING_H
 
-class Building : public Object {
+class Building : public Game_Object {
 public:
     void update() override;
 };

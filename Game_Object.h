@@ -7,16 +7,18 @@
 
 
 
-class Object {
+class Game_Object{
 
 protected:
     sf::Vector2f position;
+    Texture* texture;
 
 public:
-    Object(sf::Vector2f position);
-    virtual ~Object() = default;
+    Game_Object(sf::Vector2f position, Texture* texture );
+    virtual ~Game_Object() = default;
+    virtual void update() = 0;
+    void render();
 
-    virtual void update();
 };
 
 #endif //SPACE_INVADERS_OBJECT_H

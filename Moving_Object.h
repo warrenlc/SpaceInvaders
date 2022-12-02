@@ -3,10 +3,10 @@
 //
 #ifndef SPACE_INVADERS_MOVING_OBJECT_H
 #define SPACE_INVADERS_MOVING_OBJECT_H
-#include "Object.h"
+#include "Game_Object.h"
 
 
-class Moving_Object : public Object {
+class Moving_Object : public Game_Object {
 public:
     Moving_Object(sf::Vector2f position);
     virtual void move() = 0;

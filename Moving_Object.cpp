@@ -3,4 +3,4 @@
 //
 #include "Moving_Object.h"
 Moving_Object::Moving_Object(sf::Vector2f position)
-: Object{position} {}
+: Game_Object{position} {}
