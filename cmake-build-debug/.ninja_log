@@ -1,0 +1,9 @@
+# ninja log v5
+1	472	1669880297919141229	CMakeFiles/space_invaders.dir/main.cpp.o	8077261d70c9eb22
+1	631	1669900997551180685	CMakeFiles/space_invaders.dir/Missile.cpp.o	ad5c1fd29ff89018
+1	681	1669900997599180460	CMakeFiles/space_invaders.dir/Moving_Object.cpp.o	52959d6bce6e8106
+0	691	1669900997607180422	CMakeFiles/space_invaders.dir/Building.cpp.o	db3aa815540667d0
+1	734	1669900997655180197	CMakeFiles/space_invaders.dir/Player.cpp.o	9980fa1308dd00b5
+0	769	1669900997687180047	CMakeFiles/space_invaders.dir/main.cpp.o	8077261d70c9eb22
+1	481	1669901023691061241	CMakeFiles/space_invaders.dir/Object.cpp.o	12c1ab5b9433d9e4
+0	611	1669901474489706855	CMakeFiles/space_invaders.dir/main.cpp.o	8077261d70c9eb22
