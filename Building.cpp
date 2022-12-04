@@ -3,6 +3,7 @@
 //
 #include "Building.h"
 
+
 void Building::update() {
     return;
 }

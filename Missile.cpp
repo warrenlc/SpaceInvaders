@@ -6,4 +6,4 @@
 Missile::Missile(sf::Vector2f position)
     : Moving_Object{position} {}
 
-//    : Game_Object::Moving_Object{position} {}
+//    : Unit::Moving_Object{position} {}

@@ -5,24 +5,25 @@
 #ifndef SPACE_INVADERS_GAME_H
 #define SPACE_INVADERS_GAME_H
 #include <vector>
-#include "Game_Object.h"
+#include "Unit.h"
+//#include "Unit.h"
 #include <SFML/Graphics.hpp>
 
 class Game {
-private:
-    int level;
-    bool is_running;
 public:
-    Game() = default;
+    Game();
     ~Game();
-    std::vector<Game_Object*> units;
-    std::vector<sf::Sprite*> unit_graphics;
-    void create_objects();
-    void update_game();
+    void run();
+private:
+    sf::Texture texture;
+    sf::Sprite background;
+
+    void process_events();
+    void handle_player_input(sf::Keyboard::Key key, bool is_pressed);
+    void update();
     void render();
-    bool check_run();
-    sf::RenderWindow build_world();
-    void quit();
+
+    sf::RenderWindow window;
 
 };
 
