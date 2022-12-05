@@ -11,7 +11,7 @@ Moveable_Unit::Moveable_Unit(sf::Vector2f position)
     //background.setSize({1024, 768});
     sprite.setPosition(position);
 }
-
+Moveable_Unit::~Moveable_Unit(){}
 
 
 

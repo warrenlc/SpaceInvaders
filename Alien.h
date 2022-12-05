@@ -7,8 +7,11 @@
 #include "Enemy.h"
 class Alien : public Enemy {
 private:
-    int life;
+
 public:
-    void move() override;
+   Alien(sf::Vector2f pos, int hp);
+    ~Alien();
+
+    void update(sf::Time) override;
 };
 #endif //SPACE_INVADERS_ALIEN_H

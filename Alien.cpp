@@ -1,27 +1,27 @@
-//
+////
 // Created by albha on 05/12/22.
 //
-#include "Boss.h"
+#include "Alien.h"
 #include "Game.h"
 #include <iostream>
 
-Boss::Boss(sf::Vector2f pos, int hp)
+Alien::Alien(sf::Vector2f pos, int hp)
 : Enemy{pos, hp}{
-    if (!texture.loadFromFile("Boss.png")) {
+    if (!texture.loadFromFile("alien.png")) {
         throw std::logic_error ("Failed to load texture");
     }
     sprite.setTexture(texture);
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
     speed = 800.f;
-    direction_x = -.2f;
+    direction_x = .2f;
 }
-Boss::~Boss(){}
+Alien::~Alien(){}
 
 
-void Boss::update(sf::Time dt) {
+void Alien::update(sf::Time dt) {
     position.x += direction_x * speed * dt.asSeconds();
-    if (position.x < -320 || position.x > 530) {
+    if (position.x < -140|| position.x > 770) {
 
     this->rebound_sides();
 
@@ -33,3 +33,6 @@ void Boss::update(sf::Time dt) {
 
 
 
+
+// Created by albha on 05/12/22.
+//

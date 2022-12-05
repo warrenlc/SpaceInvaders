@@ -12,15 +12,13 @@ private:
 
 public:
     Enemy(sf::Vector2f pos, int hp);
+    ~Enemy();
     void shoot();
     void take_damage();
-    void move() override;
     void die();
 
-    void move_left() override;
-    void move_right() override;
-    void stop_left() override;
-    void stop_right() override;
+
+    void rebound_sides();
 
 };
 #endif //SPACE_INVADERS_ENEMY_H

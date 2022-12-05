@@ -12,6 +12,7 @@
 class Building : public Unit {
 public:
     Building(sf::Vector2f pos);
+    ~Building() override;
     void update(sf::Time) override;
     void render(sf::RenderWindow &window) override;
 };

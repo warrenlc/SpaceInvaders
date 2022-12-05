@@ -16,14 +16,9 @@ protected:
 
 public:
     Moveable_Unit(sf::Vector2f position);
-    virtual void move() = 0;
+    ~Moveable_Unit() override;
     void render(sf::RenderWindow &window) override;
     void update(sf::Time dt) override;
-
-    virtual void move_left() = 0;
-    virtual void move_right() = 0;
-    virtual void stop_left() = 0;
-    virtual void stop_right() = 0;
 
 };
 

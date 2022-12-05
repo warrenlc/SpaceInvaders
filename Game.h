@@ -10,6 +10,8 @@
 #include "Moveable_Unit.h"
 #include "Enemy.h"
 #include "Boss.h"
+#include "Alien.h"
+#include <memory>
 
 //#include "Unit.h"
 #include <SFML/Graphics.hpp>
@@ -20,8 +22,9 @@ public:
     ~Game();
     void run();
     void init();
+    //void quit();
 private:
-    std::vector<Unit*> units;
+    std::vector<std::shared_ptr<Unit>> units;
     sf::Texture texture;
     sf::Sprite background;
 

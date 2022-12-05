@@ -12,7 +12,7 @@ Enemy::Enemy(sf::Vector2f pos, int hp)
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
 }
-
+Enemy::~Enemy() noexcept {}
 void Enemy::shoot() {
 
 }
@@ -21,16 +21,13 @@ void Enemy::take_damage() {
 
 }
 
-void Enemy::move() {
-
-}
 
 void Enemy::die() {
 
 }
 
 
-void Enemy::move_left(){}
-void Enemy::move_right(){}
-void Enemy::stop_left(){}
-void Enemy::stop_right(){}
+
+void Enemy::rebound_sides() {
+    direction_x  = -direction_x;
+}

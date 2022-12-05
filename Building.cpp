@@ -12,6 +12,7 @@ Building::Building(sf::Vector2f pos)
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
 }
+Building::~Building(){}
 
 void Building::update(sf::Time) {}
 

@@ -4,6 +4,10 @@
 #include <stdexcept>
 #include "Game.h"
 #include <iostream>
+#include <memory>
+
+using namespace std;
+
 Game::Game()
     : window(sf::VideoMode (980, 768), "Space Invaders")
     , texture()
@@ -32,7 +36,7 @@ void Game::run() {
 
         //update();
         process_events();
-        for (Unit* x : units) {
+        for (shared_ptr<Unit> x : units) {
             x->update(dt);
         }
         render();
@@ -40,10 +44,12 @@ void Game::run() {
     }
 }
 void Game::init() {
-    units.push_back(new Building({0, 200}));
-    units.push_back(new Building({-400, 200}));
-    units.push_back(new Building({-700, 200}));
-    units.push_back(new Boss({20, -150}, 3));
+    units.push_back(shared_ptr<Building>(new Building({0, 200})));
+    units.push_back(shared_ptr<Building>(new Building({-400, 200})));
+    units.push_back(shared_ptr<Building>(new Building({-700, 200})));
+    units.push_back(shared_ptr<Boss>(new Boss({20, -150}, 3)));
+    units.push_back(shared_ptr<Alien>(new Alien({20, 30}, 1)));
+    units.push_back(shared_ptr<Alien>(new Alien({-113, 30}, 1)));
 }
 
 void Game::process_events() {
@@ -60,6 +66,7 @@ void Game::process_events() {
             //case
             if(event.type == sf::Event::Closed) {
                 window.close();
+                //quit();
             }
         }
     }
@@ -91,9 +98,16 @@ void Game::render() {
 
     window.clear();
     window.draw(background);
-    for (Unit* x : units) {
+    for (shared_ptr<Unit> x : units) {
         x->render(window);
     }
     window.display();
 
 }
+/*
+void Game::quit() {
+    for (Unit* x : units) {
+        delete x;
+    }
+}
+ */
