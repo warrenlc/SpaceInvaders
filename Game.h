@@ -7,6 +7,10 @@
 #include <vector>
 #include "Unit.h"
 #include "Building.h"
+#include "Moveable_Unit.h"
+#include "Enemy.h"
+#include "Boss.h"
+
 //#include "Unit.h"
 #include <SFML/Graphics.hpp>
 

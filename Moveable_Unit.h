@@ -11,6 +11,7 @@ public:
     Moveable_Unit(sf::Vector2f position);
     virtual void move() = 0;
     void render(sf::RenderWindow &window) override;
+    void update() override;
 };
 
 

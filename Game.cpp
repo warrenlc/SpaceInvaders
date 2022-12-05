@@ -100,11 +100,13 @@ void Game::render() {
     Building building1 = Building({0,200});
     Building building2 = Building({-400,200});
     Building building3 = Building({-700,200});
+    Boss boss = Boss({ 20, -150}, 3);
     window.clear();
     window.draw(background);
     building1.render(window);
     building2.render(window);
     building3.render(window);
+    boss.render(window);
     window.display();
 
 }

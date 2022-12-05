@@ -7,8 +7,8 @@
 #include "Enemy.h"
 class Boss : public Enemy {
 private:
-    int life;
 public:
+    Boss(sf::Vector2f pos, int hp);
     void move() override;
 };
 #endif //SPACE_INVADERS_BOSS_H

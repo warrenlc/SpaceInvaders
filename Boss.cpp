@@ -1,10 +1,9 @@
 //
 // Created by albha on 05/12/22.
 //
-#include "Enemy.h"
-Enemy::Enemy(sf::Vector2f pos, int hp)
-: Moveable_Unit{pos}
-, life{hp}{
+#include "Boss.h"
+Boss::Boss(sf::Vector2f pos, int hp)
+: Enemy{pos, hp}{
     if (!texture.loadFromFile("Boss.png")) {
         throw std::logic_error ("Failed to load texture");
     }
@@ -13,21 +12,6 @@ Enemy::Enemy(sf::Vector2f pos, int hp)
     sprite.setPosition(pos);
 }
 
-void Enemy::shoot() {
-
-}
-
-void Enemy::take_damage() {
-
-}
-
-void Enemy::move() {
-
-}
-
-void Enemy::die() {
-
-}
-
+void Boss::move() {}
 
 

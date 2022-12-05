@@ -16,5 +16,6 @@ public:
     void move() override;
     void die();
 
+
 };
 #endif //SPACE_INVADERS_ENEMY_H
