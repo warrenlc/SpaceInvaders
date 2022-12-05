@@ -9,6 +9,7 @@
 class Enemy : public Moveable_Unit {
 private:
     int life;
+
 public:
     Enemy(sf::Vector2f pos, int hp);
     void shoot();
@@ -16,6 +17,10 @@ public:
     void move() override;
     void die();
 
+    void move_left() override;
+    void move_right() override;
+    void stop_left() override;
+    void stop_right() override;
 
 };
 #endif //SPACE_INVADERS_ENEMY_H

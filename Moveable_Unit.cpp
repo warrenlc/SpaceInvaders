@@ -14,8 +14,12 @@ Moveable_Unit::Moveable_Unit(sf::Vector2f position)
 
 
 
-void Moveable_Unit::update() {}
+
 
 void Moveable_Unit::render(sf::RenderWindow &window) {
     window.draw(sprite);
+}
+
+void Moveable_Unit::update(sf::Time dt) {
+
 }

@@ -17,7 +17,7 @@ protected:
 public:
     Unit(sf::Vector2f pos);
     virtual ~Unit();
-    virtual void update() = 0;
+    virtual void update(sf::Time) = 0;
     virtual void render(sf::RenderWindow &window);
 };
 

@@ -30,4 +30,7 @@ void Enemy::die() {
 }
 
 
-
+void Enemy::move_left(){}
+void Enemy::move_right(){}
+void Enemy::stop_left(){}
+void Enemy::stop_right(){}

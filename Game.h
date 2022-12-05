@@ -19,16 +19,20 @@ public:
     Game();
     ~Game();
     void run();
+    void init();
 private:
+    std::vector<Unit*> units;
     sf::Texture texture;
     sf::Sprite background;
 
+
     void process_events();
     void handle_player_input(sf::Keyboard::Key key, bool is_pressed);
-    void update();
+    //void update();
     void render();
 
     sf::RenderWindow window;
+
 
 };
 

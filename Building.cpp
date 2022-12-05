@@ -13,9 +13,7 @@ Building::Building(sf::Vector2f pos)
     sprite.setPosition(pos);
 }
 
-void Building::update() {
-
-}
+void Building::update(sf::Time) {}
 
 void Building::render(sf::RenderWindow &window) {
     window.draw(sprite);
