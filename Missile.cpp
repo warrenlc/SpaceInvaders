@@ -4,6 +4,6 @@
 #include "Missile.h"
 
 Missile::Missile(sf::Vector2f position)
-    : Moving_Object{position} {}
+    : Moveable_Unit{position} {}
 
-//    : Unit::Moving_Object{position} {}
+//    : Unit::Moveable_Unit{position} {}

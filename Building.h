@@ -11,7 +11,9 @@
 
 class Building : public Unit {
 public:
+    Building(sf::Vector2f pos);
     void update() override;
+    void render(sf::RenderWindow &window) override;
 };
 
 #endif //SPACE_INVADERS_BUILDING_H

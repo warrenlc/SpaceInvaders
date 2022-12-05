@@ -4,8 +4,8 @@
 
 #ifndef SPACE_INVADERS_MISSILE_H
 #define SPACE_INVADERS_MISSILE_H
-#include "Moving_Object.h"
-class Missile : public Moving_Object{
+#include "Moveable_Unit.h"
+class Missile : public Moveable_Unit{
 
 public:
     Missile(sf::Vector2f position);

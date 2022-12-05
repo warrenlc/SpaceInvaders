@@ -4,8 +4,8 @@
 
 #ifndef SPACE_INVADERS_PLAYER_H
 #define SPACE_INVADERS_PLAYER_H
-#include "Moving_Object.h"
-class Player : public Moving_Object , public sf::Drawable{
+#include "Moveable_Unit.h"
+class Player : public Moveable_Unit , public sf::Drawable{
 private:
     int life;
 public:

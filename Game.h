@@ -6,6 +6,7 @@
 #define SPACE_INVADERS_GAME_H
 #include <vector>
 #include "Unit.h"
+#include "Building.h"
 //#include "Unit.h"
 #include <SFML/Graphics.hpp>
 

@@ -4,15 +4,16 @@
 
 #ifndef SPACE_INVADERS_ENEMY_H
 #define SPACE_INVADERS_ENEMY_H
-#include "Moving_Object.h"
+#include "Moveable_Unit.h"
 
-class Enemy : public Moving_Object {
-
+class Enemy : public Moveable_Unit {
+private:
+    int life;
+public:
     void shoot();
     void take_damage();
-    virtual void move() = 0;
+    void move() override;
     void die();
-
 
 };
 #endif //SPACE_INVADERS_ENEMY_H

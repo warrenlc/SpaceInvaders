@@ -55,8 +55,8 @@ build CMakeFiles/space_invaders.dir/main.cpp.o: CXX_COMPILER__space_invaders_Deb
   OBJECT_DIR = CMakeFiles/space_invaders.dir
   OBJECT_FILE_DIR = CMakeFiles/space_invaders.dir
 
-build CMakeFiles/space_invaders.dir/Game_Object.cpp.o: CXX_COMPILER__space_invaders_Debug /home/albha/TDP005/space_invaders/Game_Object.cpp || cmake_object_order_depends_target_space_invaders
-  DEP_FILE = CMakeFiles/space_invaders.dir/Game_Object.cpp.o.d
+build CMakeFiles/space_invaders.dir/Unit.cpp.o: CXX_COMPILER__space_invaders_Debug /home/albha/TDP005/space_invaders/Unit.cpp || cmake_object_order_depends_target_space_invaders
+  DEP_FILE = CMakeFiles/space_invaders.dir/Unit.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/space_invaders.dir
   OBJECT_FILE_DIR = CMakeFiles/space_invaders.dir
@@ -79,8 +79,8 @@ build CMakeFiles/space_invaders.dir/Missile.cpp.o: CXX_COMPILER__space_invaders_
   OBJECT_DIR = CMakeFiles/space_invaders.dir
   OBJECT_FILE_DIR = CMakeFiles/space_invaders.dir
 
-build CMakeFiles/space_invaders.dir/Moving_Object.cpp.o: CXX_COMPILER__space_invaders_Debug /home/albha/TDP005/space_invaders/Moving_Object.cpp || cmake_object_order_depends_target_space_invaders
-  DEP_FILE = CMakeFiles/space_invaders.dir/Moving_Object.cpp.o.d
+build CMakeFiles/space_invaders.dir/Moveable_Unit.cpp.o: CXX_COMPILER__space_invaders_Debug /home/albha/TDP005/space_invaders/Moveable_Unit.cpp || cmake_object_order_depends_target_space_invaders
+  DEP_FILE = CMakeFiles/space_invaders.dir/Moveable_Unit.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/space_invaders.dir
   OBJECT_FILE_DIR = CMakeFiles/space_invaders.dir
@@ -103,6 +103,12 @@ build CMakeFiles/space_invaders.dir/Menu_state.cpp.o: CXX_COMPILER__space_invade
   OBJECT_DIR = CMakeFiles/space_invaders.dir
   OBJECT_FILE_DIR = CMakeFiles/space_invaders.dir
 
+build CMakeFiles/space_invaders.dir/Enemy.cpp.o: CXX_COMPILER__space_invaders_Debug /home/albha/TDP005/space_invaders/Enemy.cpp || cmake_object_order_depends_target_space_invaders
+  DEP_FILE = CMakeFiles/space_invaders.dir/Enemy.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles/space_invaders.dir
+  OBJECT_FILE_DIR = CMakeFiles/space_invaders.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target space_invaders
@@ -111,7 +117,7 @@ build CMakeFiles/space_invaders.dir/Menu_state.cpp.o: CXX_COMPILER__space_invade
 #############################################
 # Link the executable space_invaders
 
-build space_invaders: CXX_EXECUTABLE_LINKER__space_invaders_Debug CMakeFiles/space_invaders.dir/main.cpp.o CMakeFiles/space_invaders.dir/Game_Object.cpp.o CMakeFiles/space_invaders.dir/Building.cpp.o CMakeFiles/space_invaders.dir/Player.cpp.o CMakeFiles/space_invaders.dir/Missile.cpp.o CMakeFiles/space_invaders.dir/Moving_Object.cpp.o CMakeFiles/space_invaders.dir/Game.cpp.o CMakeFiles/space_invaders.dir/State.cpp.o CMakeFiles/space_invaders.dir/Menu_state.cpp.o
+build space_invaders: CXX_EXECUTABLE_LINKER__space_invaders_Debug CMakeFiles/space_invaders.dir/main.cpp.o CMakeFiles/space_invaders.dir/Unit.cpp.o CMakeFiles/space_invaders.dir/Building.cpp.o CMakeFiles/space_invaders.dir/Player.cpp.o CMakeFiles/space_invaders.dir/Missile.cpp.o CMakeFiles/space_invaders.dir/Moveable_Unit.cpp.o CMakeFiles/space_invaders.dir/Game.cpp.o CMakeFiles/space_invaders.dir/State.cpp.o CMakeFiles/space_invaders.dir/Menu_state.cpp.o CMakeFiles/space_invaders.dir/Enemy.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/space_invaders.dir
   POST_BUILD = :

@@ -97,9 +97,9 @@ void Game::update() {
 }
 
 void Game::render() {
-    Unit building1 = Unit({0,200});
-    Unit building2 = Unit({-400,200});
-    Unit building3 = Unit({-700,200});
+    Building building1 = Building({0,200});
+    Building building2 = Building({-400,200});
+    Building building3 = Building({-700,200});
     window.clear();
     window.draw(background);
     building1.render(window);

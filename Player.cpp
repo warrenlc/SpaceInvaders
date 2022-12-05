@@ -6,7 +6,7 @@
 #include "point.h"
 
 Player::Player(sf::Vector2f pos)
-: Moving_Object(pos){
+: Moveable_Unit(pos){
     //position = {550, 750};
     life = 3;
     sf::Texture player_texture;
