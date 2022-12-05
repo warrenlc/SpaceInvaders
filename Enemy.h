@@ -10,6 +10,7 @@ class Enemy : public Moveable_Unit {
 private:
     int life;
 public:
+    Enemy(sf::Vector2f pos, int hp);
     void shoot();
     void take_damage();
     void move() override;
