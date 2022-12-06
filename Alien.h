@@ -6,12 +6,12 @@
 #define SPACE_INVADERS_ALIEN_H
 #include "Enemy.h"
 class Alien : public Enemy {
-private:
 
 public:
-   Alien(sf::Vector2f pos, int hp);
+   Alien(sf::Vector2f pos, int hp, float dir_x);
     ~Alien();
 
     void update(sf::Time) override;
+    void change_direction(float new_direction);
 };
 #endif //SPACE_INVADERS_ALIEN_H

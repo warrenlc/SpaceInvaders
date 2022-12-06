@@ -2,17 +2,20 @@
 // Created by albha on 05/12/22.
 //
 #include "Enemy.h"
-Enemy::Enemy(sf::Vector2f pos, int hp)
+#include <iostream>
+Enemy::Enemy(sf::Vector2f pos, int hp, float dir_x)
 : Moveable_Unit{pos}
+, direction_x{dir_x}
+
+
 , life{hp}{
-    if (!texture.loadFromFile("Boss.png")) {
-        throw std::logic_error ("Failed to load texture");
-    }
-    sprite.setTexture(texture);
-    //background.setSize({1024, 768});
-    sprite.setPosition(pos);
 }
-Enemy::~Enemy() noexcept {}
+
+
+
+
+Enemy::~Enemy()  { std::cout << "Enemy destructor called \n";}
+
 void Enemy::shoot() {
 
 }

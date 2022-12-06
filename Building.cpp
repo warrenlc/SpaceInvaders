@@ -2,17 +2,18 @@
 // Created by albha on 01/12/22.
 //
 #include "Building.h"
+#include<iostream>
 
 Building::Building(sf::Vector2f pos)
 :Unit{pos}{
-    if (!texture.loadFromFile("Building.png")) {
+    if (!texture.loadFromFile("building.png")) {
         throw std::logic_error ("Failed to load texture");
     }
     sprite.setTexture(texture);
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
 }
-Building::~Building(){}
+Building::~Building(){ std::cout << "Building destructor called \n";}
 
 void Building::update(sf::Time) {}
 

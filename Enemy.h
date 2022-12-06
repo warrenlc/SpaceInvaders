@@ -11,8 +11,8 @@ private:
     int life;
 
 public:
-    Enemy(sf::Vector2f pos, int hp);
-    ~Enemy();
+    Enemy(sf::Vector2f pos, int hp, float direction_x);
+    virtual ~Enemy();
     void shoot();
     void take_damage();
     void die();
@@ -20,5 +20,7 @@ public:
 
     void rebound_sides();
 
+    //
+    float direction_x;
 };
 #endif //SPACE_INVADERS_ENEMY_H

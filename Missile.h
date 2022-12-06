@@ -10,7 +10,7 @@ class Missile : public Moveable_Unit{
 public:
     Missile(sf::Vector2f position);
     void do_damage();
-    void move() override;
+    void move() ;
     void collide();
 
 };

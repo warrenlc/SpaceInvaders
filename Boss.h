@@ -9,7 +9,7 @@ class Boss : public Enemy {
 private:
 
 public:
-    Boss(sf::Vector2f pos, int hp);
+    Boss(sf::Vector2f pos, int hp, float dir_x);
     ~Boss();
 
     void update(sf::Time) override;

@@ -5,17 +5,23 @@
 #ifndef SPACE_INVADERS_PLAYER_H
 #define SPACE_INVADERS_PLAYER_H
 #include "Moveable_Unit.h"
-class Player : public Moveable_Unit , public sf::Drawable{
+class Player : public Moveable_Unit {
 private:
     int life;
 public:
-    Player(sf::Vector2f pos, //skicka med texture*);
+    Player(sf::Vector2f pos);
     ~Player() = default;
 
     void shoot();
     void take_damage();
-    void move() override;
     void die();
+    void move_left();
+    void move_right();
+    void stop_right();
+    void stop_left();
+    sf::Vector2f find_direction(sf::Time);
+    void update(sf::Time) override;
+
 };
 
 #endif //SPACE_INVADERS_PLAYER_H

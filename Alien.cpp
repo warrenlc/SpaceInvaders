@@ -5,30 +5,33 @@
 #include "Game.h"
 #include <iostream>
 
-Alien::Alien(sf::Vector2f pos, int hp)
-: Enemy{pos, hp}{
+Alien::Alien(sf::Vector2f pos, int hp, float dir_x)
+: Enemy{pos, hp, dir_x}{
     if (!texture.loadFromFile("alien.png")) {
         throw std::logic_error ("Failed to load texture");
     }
     sprite.setTexture(texture);
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
-    speed = 800.f;
-    direction_x = .2f;
+    speed = 1000.f;
+    //direction_x = .2f;
 }
-Alien::~Alien(){}
+Alien::~Alien(){ std::cout << "Alien destructor called \n";}
 
 
 void Alien::update(sf::Time dt) {
     position.x += direction_x * speed * dt.asSeconds();
-    if (position.x < -140|| position.x > 770) {
+    if (position.x < -140 || position.x > 770) {
 
-    this->rebound_sides();
+    rebound_sides();
 
     }
     sprite.setPosition(position);
 }
 
+void Alien::change_direction(float new_direction) {
+    direction_x = new_direction;
+}
 
 
 

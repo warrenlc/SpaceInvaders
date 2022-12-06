@@ -5,26 +5,33 @@
 #include "Game.h"
 #include <iostream>
 #include <memory>
+#include <string>
 
 using namespace std;
 
 Game::Game()
-    : window(sf::VideoMode (980, 768), "Space Invaders")
-    , texture()
+    : texture()
     , background() {
     if (!texture.loadFromFile("background.png")) {
-        throw std::logic_error ("Failed to load texture");
+      throw std::logic_error ("Failed to load texture");
     }
     background.setTexture(texture);
     //background.setSize({1024, 768});
-    background.setPosition(0.f, -10.f);
+    background.setOrigin(0,0);
+
+
+
+    background.setPosition(0, 0);
 
 }
 Game::~Game() {
+    units.clear();
+    std::cout << "Game destructor called\n";
+}//= default;
 
-}
+//std::vector
 
-void Game::run() {
+void Game::run(sf::RenderWindow &window) {
     sf::Clock clock;
     /*
     sf::Time time_since_last_update = sf::Time::Zero;
@@ -35,44 +42,39 @@ void Game::run() {
         sf::Time dt = clock.restart();
 
         //update();
-        process_events();
-        for (shared_ptr<Unit> x : units) {
+      process_events(window);
+        for (const shared_ptr<Unit>& x : units) {
             x->update(dt);
         }
-        render();
+        render(window);
 
     }
 }
 void Game::init() {
-    units.push_back(shared_ptr<Building>(new Building({0, 200})));
-    units.push_back(shared_ptr<Building>(new Building({-400, 200})));
-    units.push_back(shared_ptr<Building>(new Building({-700, 200})));
-    units.push_back(shared_ptr<Boss>(new Boss({20, -150}, 3)));
-    units.push_back(shared_ptr<Alien>(new Alien({20, 30}, 1)));
-    units.push_back(shared_ptr<Alien>(new Alien({-113, 30}, 1)));
+    units.push_back(shared_ptr<Unit>(new Building({-100, 200})));
+    units.push_back(shared_ptr<Unit>(new Building({-450, 200})));
+    units.push_back(shared_ptr<Unit>(new Building({-800, 168})));
+    units.push_back(shared_ptr<Unit>(new Boss({20, -150}, 3, -.9f)));
+    units.push_back(shared_ptr<Unit>(new Alien({-113, 30}, 1, -.2f)));
+    units.push_back(shared_ptr<Unit>(new Alien({20, 120}, 1, .2f)));
+    units.push_back(shared_ptr<Unit>(new Alien({120, 240}, 1, -.2f)));
+    units.push_back(shared_ptr<Unit>(new Player({-450, 200})));
 }
 
-void Game::process_events() {
+void Game::process_events(sf::RenderWindow &window) {
     sf::Event event;
     while (window.pollEvent(event)) {
-        //switch (event.type) {
-           /* case sf::Event::KeyPressed:
-                handle_player_input(event.key.code, true);
-                break;
-            case sf::Event::KeyReleased:
-                handle_player_input(event.key.code, false);
-                break;
-                */
-            //case
-            if(event.type == sf::Event::Closed) {
-                window.close();
-                //quit();
-            }
+        if (event.type == sf::Event::Closed) {
+            window.close();
         }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            window.close();
+        }
+
     }
-
-
-void Game::handle_player_input(sf::Keyboard::Key key, bool is_pressed) {
+}
+/*
+void Game::handle_player_input(sf::Keyboard::Key key, bool is_pressed, Player& player) {
     sf::Vector2f direction;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         direction.x -= 1;
@@ -83,22 +85,20 @@ void Game::handle_player_input(sf::Keyboard::Key key, bool is_pressed) {
 
 
 
-    /*bool is_moving_left;
-    bool is_moving_right;
     if (key == sf::Keyboard::A) {
-        is_moving_left = is_pressed;
-    } else if (key == sf::Keyboard::D){
-        is_moving_right = is_pressed;
-    }*/
+       ;
+    } else if (key == sf::Keyboard::D) {
+        is_pressed = player.move_right() ;
+    }
 }
-
+*/
 //void Game::update() {}
 
-void Game::render() {
+void Game::render(sf::RenderWindow &window) {
 
     window.clear();
     window.draw(background);
-    for (shared_ptr<Unit> x : units) {
+    for (const shared_ptr<Unit>& x : units) {
         x->render(window);
     }
     window.display();
