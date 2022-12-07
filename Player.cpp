@@ -58,9 +58,15 @@ sf::Vector2f Player::find_direction(sf::Time dt){
     //sf::Vector2f direction;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
         position.x -= speed * dt.asSeconds();
+        if (position.x <= 5) {
+            position.x = 5;
+        }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
         position.x += speed * dt.asSeconds();
+        if (position.x >= 870) {
+            position.x = 870;
+        }
     }
     return position;
     }

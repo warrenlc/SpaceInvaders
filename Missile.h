@@ -6,11 +6,14 @@
 #define SPACE_INVADERS_MISSILE_H
 #include "Moveable_Unit.h"
 class Missile : public Moveable_Unit{
+private:
+    bool is_from_player;
 
 public:
-    Missile(sf::Vector2f position);
+    Missile(sf::Vector2f position, bool is_from_player);
+    ~Missile();
     void do_damage();
-    void move() ;
+    void update(sf::Time dt) ;
     void collide();
 
 };

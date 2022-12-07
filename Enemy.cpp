@@ -34,3 +34,5 @@ void Enemy::die() {
 void Enemy::rebound_sides() {
     direction_x  = -direction_x;
 }
+
+

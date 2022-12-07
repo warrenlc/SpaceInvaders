@@ -19,5 +19,6 @@ void Building::update(sf::Time) {}
 
 void Building::render(sf::RenderWindow &window){
     Unit::render(window);
+   // sprite.setPosition(0, 1.9*sprite.getLocalBounds().height);
     window.draw(sprite);
 }

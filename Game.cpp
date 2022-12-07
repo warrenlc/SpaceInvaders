@@ -17,7 +17,7 @@ Game::Game()
     }
     background.setTexture(texture);
     //background.setSize({1024, 768});
-    background.setOrigin(0,0);
+    background.setOrigin(0,10);
 
 
 
@@ -51,14 +51,14 @@ void Game::run(sf::RenderWindow &window) {
     }
 }
 void Game::init() {
-    units.push_back(shared_ptr<Unit>(new Building({-100, 200})));
-    units.push_back(shared_ptr<Unit>(new Building({-450, 200})));
-    units.push_back(shared_ptr<Unit>(new Building({-800, 168})));
-    units.push_back(shared_ptr<Unit>(new Boss({20, -150}, 3, -.2f)));
-    units.push_back(shared_ptr<Unit>(new Alien({-113, 30}, 1, -.2f)));
-    units.push_back(shared_ptr<Unit>(new Alien({20, 120}, 1, .2f)));
-    units.push_back(shared_ptr<Unit>(new Alien({120, 240}, 1, -.2f)));
-    units.push_back(shared_ptr<Unit>(new Player({-450, 200})));
+    units.push_back(shared_ptr<Unit>(new Building({0, 625})));
+    units.push_back(shared_ptr<Unit>(new Building({385, 625})));
+    units.push_back(shared_ptr<Unit>(new Building({770, 625})));
+    units.push_back(shared_ptr<Unit>(new Boss({450, 10}, 3, .2f, true)));
+    units.push_back(shared_ptr<Unit>(new Alien({400, 150}, 1, .2f, true)));
+    units.push_back(shared_ptr<Unit>(new Alien({200, 300}, 1, .3f, true)));
+    units.push_back(shared_ptr<Unit>(new Alien({0, 450}, 1, .2f, true)));
+    units.push_back(shared_ptr<Unit>(new Player({0, 650})));
 }
 
 void Game::process_events(sf::RenderWindow &window) {

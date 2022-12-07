@@ -5,7 +5,7 @@
 
 
 int main() {
-    sf::RenderWindow window{sf::VideoMode{1980, 1000}, "Space Invaders"};
+    sf::RenderWindow window{sf::VideoMode{980, 780}, "Space Invaders"};
     Game game;
     game.init();
     game.run(window);

@@ -5,7 +5,7 @@
 #include "Game.h"
 #include <iostream>
 
-Boss::Boss(sf::Vector2f pos, int hp, float dir_x)
+Boss::Boss(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
 : Enemy{pos, hp, dir_x}{
     if (!texture.loadFromFile("Boss.png")) {
         throw std::logic_error ("Failed to load texture");
@@ -14,7 +14,7 @@ Boss::Boss(sf::Vector2f pos, int hp, float dir_x)
     sprite.setOrigin(0.f,0.f);
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
-    speed = 800.f;
+    speed = 4400.f;
     //direction_x = -.2f;
 }
 Boss::~Boss(){ }
@@ -23,14 +23,27 @@ Boss::~Boss(){ }
 void Boss::update(sf::Time dt) {
     //position.x = 0;
     position.x += direction_x * speed * dt.asSeconds();
-    if ((position.x < -320) || (position.x > 530)) {
+    if (position.x <= 0){
+        if (!is_moving_right){
+            rebound_sides();
+        }
+        is_moving_right = true;
+    } else if (position.x >= 850) {
+        if (is_moving_right){
+            rebound_sides();
+        }
+        is_moving_right = false;
+    }
+    sprite.setPosition(position);
+}
+    /*if ((position.x <= 1) || (position.x >= 850)) {
 
     rebound_sides();
 
     }
     sprite.setPosition(position);
     std::cout << position.x << std::endl;
-}
+*/
 
 
 
