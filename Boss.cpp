@@ -21,9 +21,9 @@ Boss::~Boss(){ }
 
 
 void Boss::update(sf::Time dt) {
-    position.x = 0;
-    //position.x += position.x * speed * dt.asSeconds();
-    if ((position.x < 0) || (position.x > 530)) {
+    //position.x = 0;
+    position.x += direction_x * speed * dt.asSeconds();
+    if ((position.x < -320) || (position.x > 530)) {
 
     rebound_sides();
 

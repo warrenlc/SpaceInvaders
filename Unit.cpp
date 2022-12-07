@@ -13,7 +13,12 @@ Unit::~Unit() {
 }//= default;
 
 void Unit::render(sf::RenderWindow &window)  {
-
+    sf::RectangleShape rect({sprite.getLocalBounds().width, sprite.getLocalBounds().height});
+    rect.setPosition(sprite.getPosition());
+    rect.setFillColor(sf::Color::Transparent);
+    rect.setOutlineColor(sf::Color::Red);
+    rect.setOutlineThickness(2.0f);
+    window.draw(rect);
 }
 
 

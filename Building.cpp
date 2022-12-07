@@ -17,6 +17,7 @@ Building::~Building(){ std::cout << "Building destructor called \n";}
 
 void Building::update(sf::Time) {}
 
-void Building::render(sf::RenderWindow &window) {
+void Building::render(sf::RenderWindow &window){
+    Unit::render(window);
     window.draw(sprite);
 }

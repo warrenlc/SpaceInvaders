@@ -54,7 +54,7 @@ void Game::init() {
     units.push_back(shared_ptr<Unit>(new Building({-100, 200})));
     units.push_back(shared_ptr<Unit>(new Building({-450, 200})));
     units.push_back(shared_ptr<Unit>(new Building({-800, 168})));
-    units.push_back(shared_ptr<Unit>(new Boss({20, -150}, 3, -.9f)));
+    units.push_back(shared_ptr<Unit>(new Boss({20, -150}, 3, -.2f)));
     units.push_back(shared_ptr<Unit>(new Alien({-113, 30}, 1, -.2f)));
     units.push_back(shared_ptr<Unit>(new Alien({20, 120}, 1, .2f)));
     units.push_back(shared_ptr<Unit>(new Alien({120, 240}, 1, -.2f)));

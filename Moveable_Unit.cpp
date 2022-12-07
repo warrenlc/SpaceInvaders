@@ -9,6 +9,7 @@ Moveable_Unit::Moveable_Unit(sf::Vector2f position)
 Moveable_Unit::~Moveable_Unit(){ std::cout << "Moveable Unit destructor called \n";}
 
 void Moveable_Unit::render(sf::RenderWindow &window) {
+    Unit::render(window);
     window.draw(sprite);
 }
 
