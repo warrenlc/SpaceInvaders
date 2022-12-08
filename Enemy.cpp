@@ -16,7 +16,7 @@ Enemy::Enemy(sf::Vector2f pos, int hp, float dir_x)
 
 Enemy::~Enemy()  { std::cout << "Enemy destructor called \n";}
 
-void Enemy::shoot() {
+bool Enemy::shoot() {
 
 }
 

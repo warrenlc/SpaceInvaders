@@ -15,6 +15,7 @@ public:
     ~Missile();
     void do_damage();
     void update(sf::Time dt) ;
+    bool shoot();
 
     //void collide();
 

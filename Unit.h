@@ -19,6 +19,10 @@ public:
     virtual ~Unit();
     virtual void update(sf::Time) = 0;
     virtual void render(sf::RenderWindow &window);
+   // virtual bool shoot();
+    virtual sf::Vector2f getPosition() {
+        return position;
+    }
 };
 
 #endif //SPACE_INVADERS_OBJECT_H

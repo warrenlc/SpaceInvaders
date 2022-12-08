@@ -19,6 +19,7 @@ public:
     virtual ~Moveable_Unit() ;
     void render(sf::RenderWindow &window) override;
     void update(sf::Time dt) override;
+    virtual bool shoot() = 0;
 
 };
 

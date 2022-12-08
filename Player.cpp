@@ -3,7 +3,7 @@
 //
 #include "Player.h"
 #include "Missile.h"
-#include "point.h"
+
 #include <memory>
 #include <iostream>
 Player::Player(sf::Vector2f pos)
@@ -24,11 +24,14 @@ Player::Player(sf::Vector2f pos)
 
 }
 
-void Player::shoot() {
+bool Player::shoot() {
 //    Missile *missile = new Missile{position};
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
-        std::shared_ptr<Unit>(new Missile(this->position, -2.f, true));
+        //std::shared_ptr<Unit>(new Missile(this->position, -2.f, true));
+        //Missile* m = new Missile(this->position, -2.f, true);
+        return true;
     }
+    return false;
 }
 /*
 void Player::move() {
@@ -82,7 +85,7 @@ void move(){
 void Player::update(sf::Time dt) {
     sf::Vector2f direction = find_direction(dt);
     position = direction;
-    shoot();
+    bool shot = shoot();
 
     /*if (is_moving_left) {
         position.x -= speed * dt.asSeconds();

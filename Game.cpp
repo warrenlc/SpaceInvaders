@@ -25,7 +25,7 @@ Game::Game()
 
 }
 Game::~Game() {
-    units.clear();
+    shooters.clear();
     std::cout << "Game destructor called\n";
 }//= default;
 
@@ -43,24 +43,41 @@ void Game::run(sf::RenderWindow &window) {
 
         //update();
       process_events(window);
-        for (const shared_ptr<Unit>& x : units) {
+        /*for (const shared_ptr<Moveable_Unit>& x : shooters) {
             x->update(dt);
+            std::cout << "updated\n";
+            if (x->shoot() == true) {
+                shooters.push_back(shared_ptr<Moveable_Unit>(new Missile(x->getPosition(), -2.f, true)));
+                std::cout << "shot fired\n";
+            }
+        }*/
+        for (size_t i = 0; i < shooters.size(); i++) {
+            shooters[i]->update(dt);
+            if (shooters[i]->shoot()) {
+                shooters.push_back(shared_ptr<Moveable_Unit>(new Missile(shooters[i]->getPosition(), -2.f, true)));
+            }
         }
-        render(window);
 
+
+        render(window);
     }
 }
 void Game::init() {
 
-    units.push_back(shared_ptr<Unit>(new Building({0, 625})));
-    units.push_back(shared_ptr<Unit>(new Building({385, 625})));
-    units.push_back(shared_ptr<Unit>(new Building({770, 625})));
-    units.push_back(shared_ptr<Unit>(new Boss({450, 10}, 3, .2f, true)));
+    buildings.push_back(shared_ptr<Unit>(new Building({0, 625})));
+    buildings.push_back(shared_ptr<Unit>(new Building({385, 625})));
+    buildings.push_back(shared_ptr<Unit>(new Building({770, 625})));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Boss({450, 10}, 3, .2f, true)));
     //units.push_back(shared_ptr<Missile>(new Missile({450,70}, .2f, false)));
-    units.push_back(shared_ptr<Unit>(new Alien({400, 150}, 1, .2f, true)));
-    units.push_back(shared_ptr<Unit>(new Alien({200, 300}, 1, .3f, true)));
-    units.push_back(shared_ptr<Unit>(new Alien({0, 450}, 1, .2f, true)));
-    units.push_back(shared_ptr<Unit>(new Player({0, 650})));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({400, 150}, 1, .2f, true)));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({200, 300}, 1, .3f, true)));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({0, 450}, 1, .2f, true)));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Player({0, 650})));
+
+
+
+
+
 }
 
 void Game::process_events(sf::RenderWindow &window) {
@@ -100,7 +117,10 @@ void Game::render(sf::RenderWindow &window) {
 
     window.clear();
     window.draw(background);
-    for (const shared_ptr<Unit>& x : units) {
+    for (const shared_ptr<Unit>& x : buildings) {
+        x->render(window);
+    }
+    for (const shared_ptr<Unit>& x: shooters) {
         x->render(window);
     }
     window.display();

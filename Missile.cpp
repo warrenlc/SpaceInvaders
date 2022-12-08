@@ -21,8 +21,10 @@ Missile::~Missile(){}
 void Missile::do_damage(){}
 
 void Missile::update(sf::Time dt) {
-position.y += direction_y * speed * dt.asSeconds();
-sprite.setPosition(position);
-}
 
+    position.y += direction_y * speed * dt.asSeconds();
+    sprite.setPosition(position);
+
+}
+bool Missile::shoot() { return false; }
 

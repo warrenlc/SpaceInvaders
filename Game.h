@@ -27,7 +27,9 @@ public:
     void init();
     void render(sf::RenderWindow &window);
     //void quit();
-    std::vector<std::shared_ptr<Unit>> units;
+    std::vector<std::shared_ptr<Moveable_Unit>> shooters;
+    std::vector<std::shared_ptr<Unit>> buildings;
+
 private:
     //std::vector<std::shared_ptr<Unit>> units;
     sf::Texture texture;

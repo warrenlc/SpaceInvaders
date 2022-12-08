@@ -25,9 +25,9 @@ Boss::~Boss(){ }
 
 void Boss::update(sf::Time dt) {
     //position.x = 0;
-    if (random_int(0, 100) < 50) {
+    /*if (random_int(0, 100) < 50) {
         std::shared_ptr<Missile> (new Missile(position,2.f, false));
-    }
+    */
     position.x += direction_x * speed * dt.asSeconds();
     if (position.x <= 0){
         if (!is_moving_right){

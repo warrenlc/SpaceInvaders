@@ -13,7 +13,7 @@ private:
 public:
     Enemy(sf::Vector2f pos, int hp, float direction_x);
     virtual ~Enemy();
-    void shoot();
+    bool shoot();
     void take_damage();
     void die();
 

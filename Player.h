@@ -5,6 +5,8 @@
 #ifndef SPACE_INVADERS_PLAYER_H
 #define SPACE_INVADERS_PLAYER_H
 #include "Moveable_Unit.h"
+#include "Missile.h"
+
 class Player : public Moveable_Unit {
 private:
     int life;
@@ -12,7 +14,7 @@ public:
     Player(sf::Vector2f pos);
     ~Player() = default;
 
-    void shoot();
+    bool shoot() override;
     void take_damage();
     void die();
     void move_left();
