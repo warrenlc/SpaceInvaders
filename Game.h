@@ -12,6 +12,7 @@
 #include "Boss.h"
 #include "Alien.h"
 #include "Player.h"
+#include "Missile.h"
 #include <memory>
 
 //#include "Unit.h"
@@ -26,8 +27,9 @@ public:
     void init();
     void render(sf::RenderWindow &window);
     //void quit();
-private:
     std::vector<std::shared_ptr<Unit>> units;
+private:
+    //std::vector<std::shared_ptr<Unit>> units;
     sf::Texture texture;
     sf::Sprite background;
 
@@ -35,7 +37,6 @@ private:
     void process_events(sf::RenderWindow &window);
     //void handle_player_input(sf::Keyboard::Key key, bool is_pressed, Player& player);
     //void update();
-
 
 };
 

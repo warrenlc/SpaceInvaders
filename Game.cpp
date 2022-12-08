@@ -51,10 +51,12 @@ void Game::run(sf::RenderWindow &window) {
     }
 }
 void Game::init() {
+
     units.push_back(shared_ptr<Unit>(new Building({0, 625})));
     units.push_back(shared_ptr<Unit>(new Building({385, 625})));
     units.push_back(shared_ptr<Unit>(new Building({770, 625})));
     units.push_back(shared_ptr<Unit>(new Boss({450, 10}, 3, .2f, true)));
+    //units.push_back(shared_ptr<Missile>(new Missile({450,70}, .2f, false)));
     units.push_back(shared_ptr<Unit>(new Alien({400, 150}, 1, .2f, true)));
     units.push_back(shared_ptr<Unit>(new Alien({200, 300}, 1, .3f, true)));
     units.push_back(shared_ptr<Unit>(new Alien({0, 450}, 1, .2f, true)));

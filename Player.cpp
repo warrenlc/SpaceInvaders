@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "Missile.h"
 #include "point.h"
+#include <memory>
 #include <iostream>
 Player::Player(sf::Vector2f pos)
 : Moveable_Unit(pos){
@@ -25,6 +26,9 @@ Player::Player(sf::Vector2f pos)
 
 void Player::shoot() {
 //    Missile *missile = new Missile{position};
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+        std::shared_ptr<Unit>(new Missile(this->position, -2.f, true));
+    }
 }
 /*
 void Player::move() {
@@ -38,7 +42,6 @@ void Player::move() {
 */
 void Player::move_left() {
     is_moving_left = true;
-
 }
 
 void Player::move_right() {
@@ -79,6 +82,7 @@ void move(){
 void Player::update(sf::Time dt) {
     sf::Vector2f direction = find_direction(dt);
     position = direction;
+    shoot();
 
     /*if (is_moving_left) {
         position.x -= speed * dt.asSeconds();
@@ -86,6 +90,7 @@ void Player::update(sf::Time dt) {
     if (is_moving_right) {
         position.x += speed * dt.asSeconds();
     }*/
+
     sprite.setPosition(position);
 }
 
