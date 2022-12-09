@@ -10,11 +10,15 @@
 class Player : public Moveable_Unit {
 private:
     int life;
+    sf::Clock shooting_clock;
+
 public:
     Player(sf::Vector2f pos);
     ~Player() = default;
 
-    bool shoot() override;
+    void shoot(sf::Time &dt) override;
+    bool can_shoot() override;
+    //bool check_space_press();
     void take_damage();
     void die();
     void move_left();
@@ -23,6 +27,7 @@ public:
     void stop_left();
     sf::Vector2f find_direction(sf::Time);
     void update(sf::Time) override;
+
 
 };
 

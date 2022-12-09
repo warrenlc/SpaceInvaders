@@ -11,6 +11,7 @@ Alien::Alien(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
     if (!texture.loadFromFile("alien.png")) {
         throw std::logic_error ("Failed to load texture");
     }
+
     sprite.setTexture(texture);
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
@@ -19,6 +20,7 @@ Alien::Alien(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
 }
 Alien::~Alien(){ std::cout << "Alien destructor called \n";}
 
+bool Alien::can_shoot(){return false;}
 
 void Alien::update(sf::Time dt) {
     position.x += direction_x * speed * dt.asSeconds();
@@ -36,11 +38,7 @@ void Alien::update(sf::Time dt) {
     sprite.setPosition(position);
 }
 
-void Alien::change_direction(float new_direction) {
-    direction_x = new_direction;
-}
-
-
+void Alien::shoot(sf::Time &dt) {} //{ return false;}
 
 
 

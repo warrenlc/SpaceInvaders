@@ -4,7 +4,7 @@
 #ifndef SPACE_INVADERS_MOVEABLE_UNIT_H
 #define SPACE_INVADERS_MOVEABLE_UNIT_H
 #include "Unit.h"
-
+#include <memory>
 
 class Moveable_Unit : public Unit {
 protected:
@@ -13,13 +13,16 @@ protected:
     bool is_moving_left = false;
     float direction_x;
     float direction_y;
+    bool shooting;
 
 public:
     Moveable_Unit(sf::Vector2f position);
     virtual ~Moveable_Unit() ;
     void render(sf::RenderWindow &window) override;
     void update(sf::Time dt) override;
-    virtual bool shoot() = 0;
+    virtual void shoot(sf::Time &dt) = 0;
+    //bool collides(std::shared_ptr<Moveable_Unit> other);
+    virtual bool can_shoot() = 0;
 
 };
 

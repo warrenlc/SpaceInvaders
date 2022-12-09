@@ -23,6 +23,7 @@ public:
     virtual sf::Vector2f getPosition() {
         return position;
     }
+    sf::Sprite get_sprite() {return sprite;}
 };
 
 #endif //SPACE_INVADERS_OBJECT_H

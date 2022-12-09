@@ -38,8 +38,9 @@ void Game::run(sf::RenderWindow &window) {
     sf::Time time_per_frame = sf::seconds(1.f/60.f);
      */
     while(window.isOpen()) {
-
-        sf::Time dt = clock.restart();
+        sf::Time time_per_frame = sf::seconds(1.f/60.f);
+        sf::Time dt = time_per_frame;
+        dt = clock.restart();
 
         //update();
       process_events(window);
@@ -51,11 +52,19 @@ void Game::run(sf::RenderWindow &window) {
                 std::cout << "shot fired\n";
             }
         }*/
+
+
+
         for (size_t i = 0; i < shooters.size(); i++) {
             shooters[i]->update(dt);
-            if (shooters[i]->shoot()) {
-                shooters.push_back(shared_ptr<Moveable_Unit>(new Missile(shooters[i]->getPosition(), -2.f, true)));
-            }
+            if (shooters[i]->can_shoot()) {
+                shared_ptr<Moveable_Unit> missile(new Missile(shooters[i]->getPosition(), -2.f, true));
+                shooters.push_back(missile);
+                }
+           // else {
+           //     shared_ptr<Moveable_Unit> missile(new Missile(shooters[i]->getPosition(), 2.f, false));
+           //     shooters.push_back(missile);
+           // }
         }
 
 
@@ -67,12 +76,12 @@ void Game::init() {
     buildings.push_back(shared_ptr<Unit>(new Building({0, 625})));
     buildings.push_back(shared_ptr<Unit>(new Building({385, 625})));
     buildings.push_back(shared_ptr<Unit>(new Building({770, 625})));
-    shooters.push_back(shared_ptr<Moveable_Unit>(new Boss({450, 10}, 3, .2f, true)));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Boss({450, 10}, 3, .2f, false)));
     //units.push_back(shared_ptr<Missile>(new Missile({450,70}, .2f, false)));
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({400, 150}, 1, .2f, true)));
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({200, 300}, 1, .3f, true)));
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({0, 450}, 1, .2f, true)));
-    shooters.push_back(shared_ptr<Moveable_Unit>(new Player({0, 650})));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Player({490, 650})));
 
 
 
@@ -89,7 +98,6 @@ void Game::process_events(sf::RenderWindow &window) {
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             window.close();
         }
-
     }
 }
 /*

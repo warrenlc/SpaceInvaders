@@ -9,6 +9,8 @@ Building::Building(sf::Vector2f pos)
     if (!texture.loadFromFile("building.png")) {
         throw std::logic_error ("Failed to load texture");
     }
+    auto size = sprite.getPosition();
+    sprite.setOrigin(size.x, size.y);
     sprite.setTexture(texture);
     //background.setSize({1024, 768});
     sprite.setPosition(pos);

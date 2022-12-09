@@ -6,8 +6,7 @@
 Enemy::Enemy(sf::Vector2f pos, int hp, float dir_x)
 : Moveable_Unit{pos}
 , direction_x{dir_x}
-
-
+, shooting_clock{}
 , life{hp}{
 }
 
@@ -16,10 +15,11 @@ Enemy::Enemy(sf::Vector2f pos, int hp, float dir_x)
 
 Enemy::~Enemy()  { std::cout << "Enemy destructor called \n";}
 
-bool Enemy::shoot() {
-
+void Enemy::shoot(sf::Time &dt) {
+//return false;
 }
 
+bool Enemy::can_shoot() {return false;}
 void Enemy::take_damage() {
 
 }

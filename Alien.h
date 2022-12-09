@@ -14,6 +14,7 @@ public:
     ~Alien();
 
     void update(sf::Time) override;
-    void change_direction(float new_direction);
+    void shoot(sf::Time &dt) override;
+    bool can_shoot() override;
 };
 #endif //SPACE_INVADERS_ALIEN_H

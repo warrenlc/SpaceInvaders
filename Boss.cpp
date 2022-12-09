@@ -9,40 +9,37 @@
 #include <iostream>
 
 Boss::Boss(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
-: Enemy{pos, hp, dir_x}{
+: Enemy{pos, hp, dir_x}, is_moving_right{is_moving_right}{
     if (!texture.loadFromFile("Boss.png")) {
         throw std::logic_error ("Failed to load texture");
     }
+
     sprite.setTexture(texture);
     sprite.setOrigin(0.f,0.f);
-    //background.setSize({1024, 768});
     sprite.setPosition(pos);
     speed = 1000.f;
     //direction_x = -.2f;
+    //background.setSize({1024, 768});
 }
 Boss::~Boss(){ }
 
 
 void Boss::update(sf::Time dt) {
-    //position.x = 0;
-    /*if (random_int(0, 100) < 50) {
-        std::shared_ptr<Missile> (new Missile(position,2.f, false));
-    */
     position.x += direction_x * speed * dt.asSeconds();
     if (position.x <= 0){
         if (!is_moving_right){
             rebound_sides();
         }
         is_moving_right = true;
-    } else if (position.x >= 850) {
+    } else if (position.x >= 880) {
         if (is_moving_right){
             rebound_sides();
         }
         is_moving_right = false;
     }
     sprite.setPosition(position);
-
 }
+
     /*if ((position.x <= 1) || (position.x >= 850)) {
 
     rebound_sides();

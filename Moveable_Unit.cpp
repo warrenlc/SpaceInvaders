@@ -16,3 +16,14 @@ void Moveable_Unit::render(sf::RenderWindow &window) {
 void Moveable_Unit::update(sf::Time dt) {
 
 }
+
+
+/*
+bool Moveable_Unit::collides(std::shared_ptr<Moveable_Unit> other) {
+    if(this->sprite.getGlobalBounds().intersects(other->sprite.getGlobalBounds()))
+    {
+        return true;
+    }
+    return false;
+}
+*/

@@ -30,10 +30,12 @@ public:
     std::vector<std::shared_ptr<Moveable_Unit>> shooters;
     std::vector<std::shared_ptr<Unit>> buildings;
 
+
 private:
     //std::vector<std::shared_ptr<Unit>> units;
     sf::Texture texture;
     sf::Sprite background;
+
 
 
     void process_events(sf::RenderWindow &window);

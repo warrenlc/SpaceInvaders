@@ -6,7 +6,8 @@
 
 int main() {
     sf::RenderWindow window{sf::VideoMode{980, 780}, "Space Invaders"};
-    window.setKeyRepeatEnabled(true);
+    window.setVerticalSyncEnabled(false);
+    window.setKeyRepeatEnabled(false);
     Game game;
     game.init();
     game.run(window);

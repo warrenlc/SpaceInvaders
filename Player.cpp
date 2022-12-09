@@ -7,13 +7,14 @@
 #include <memory>
 #include <iostream>
 Player::Player(sf::Vector2f pos)
-: Moveable_Unit(pos){
+: Moveable_Unit(pos), shooting_clock{} {
     //position = {550, 750};
     std::cout << "Creating player\n";
     life = 3;
     if(!texture.loadFromFile("player.png")){
             throw std::logic_error ("Failed to load texture");
     }
+
     sprite.setTexture(texture);
     sprite.setPosition(pos);
     speed = 800.f;
@@ -24,14 +25,40 @@ Player::Player(sf::Vector2f pos)
 
 }
 
-bool Player::shoot() {
-//    Missile *missile = new Missile{position};
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
-        //std::shared_ptr<Unit>(new Missile(this->position, -2.f, true));
-        //Missile* m = new Missile(this->position, -2.f, true);
-        return true;
+void Player::shoot(sf::Time &dt) {
+
+    //    Missile *missile = new Missile{position};
+   // sf::Clock bullet_clock;
+    //sf::Time bullet_cooldown = dt;
+   // bullet_cooldown = bullet_clock.getElapsedTime();
+    //sf::Event event;
+    //if (event.type == event.key.code)
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && shooting_clock.getElapsedTime().asMilliseconds() >= 700) {
+        std::cout << "shoot\n";
+        shooting_clock.restart();
+        shooting = true;
+    } else
+        {
+        shooting = false;
     }
-    return false;
+}
+
+bool Player::can_shoot()
+{
+    return shooting;
+}
+/*
+bool Player::shooting_open(){
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+        return false;
+    }
+    return true;
+}
+*/
+/*
+bool Player::check_space_press() {
+    return
 }
 /*
 void Player::move() {
@@ -78,14 +105,12 @@ sf::Vector2f Player::find_direction(sf::Time dt){
     }
 
 
-void move(){
-
-}
 
 void Player::update(sf::Time dt) {
     sf::Vector2f direction = find_direction(dt);
     position = direction;
-    bool shot = shoot();
+
+    shoot(dt);
 
     /*if (is_moving_left) {
         position.x -= speed * dt.asSeconds();

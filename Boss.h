@@ -8,11 +8,15 @@
 class Boss : public Enemy {
 private:
 bool is_moving_right;
+
 public:
     Boss(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right);
     ~Boss();
 
     void update(sf::Time) override;
-
+    //void shoot(sf::Time &dt);
+    //bool can_shoot() override;
+    //bool can_shoot() override;
+    //void shoot(sf::Time& dt) override;
 };
 #endif //SPACE_INVADERS_BOSS_H
