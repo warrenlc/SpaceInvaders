@@ -28,6 +28,7 @@ public:
     void render(sf::RenderWindow &window);
     //void quit();
     std::vector<std::shared_ptr<Moveable_Unit>> shooters;
+    std::vector<std::shared_ptr<Moveable_Unit>> player_shooter;
     std::vector<std::shared_ptr<Unit>> buildings;
 
 

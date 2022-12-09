@@ -57,16 +57,18 @@ void Game::run(sf::RenderWindow &window) {
 
         for (size_t i = 0; i < shooters.size(); i++) {
             shooters[i]->update(dt);
-            if (shooters[i]->can_shoot()) {
-                shared_ptr<Moveable_Unit> missile(new Missile(shooters[i]->getPosition(), -2.f, true));
+            if (shooters[i]->can_shoot()){
+                shared_ptr <Moveable_Unit> missile(new Missile(shooters[i]->getPosition(), 2.f, true));
                 shooters.push_back(missile);
-                }
-           // else {
-           //     shared_ptr<Moveable_Unit> missile(new Missile(shooters[i]->getPosition(), 2.f, false));
-           //     shooters.push_back(missile);
-           // }
+            }
         }
-
+        for (size_t i = 0; i < player_shooter.size(); i++) {
+            player_shooter[i]->update(dt);
+            if (player_shooter[i]->can_shoot()) {
+                shared_ptr <Moveable_Unit> missile(new Missile(player_shooter[i]->getPosition(), -2.f, true));
+                player_shooter.push_back(missile);
+            }
+        }
 
         render(window);
     }
@@ -81,7 +83,7 @@ void Game::init() {
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({400, 150}, 1, .2f, true)));
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({200, 300}, 1, .3f, true)));
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({0, 450}, 1, .2f, true)));
-    shooters.push_back(shared_ptr<Moveable_Unit>(new Player({490, 650})));
+    player_shooter.push_back(shared_ptr<Moveable_Unit>(new Player({490, 650})));
 
 
 
@@ -129,6 +131,9 @@ void Game::render(sf::RenderWindow &window) {
         x->render(window);
     }
     for (const shared_ptr<Unit>& x: shooters) {
+        x->render(window);
+    }
+    for (const shared_ptr<Unit>& x: player_shooter) {
         x->render(window);
     }
     window.display();

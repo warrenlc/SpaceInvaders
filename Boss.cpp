@@ -9,7 +9,7 @@
 #include <iostream>
 
 Boss::Boss(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
-: Enemy{pos, hp, dir_x}, is_moving_right{is_moving_right}{
+: Enemy{pos, hp, dir_x},shooting_clock{}, is_moving_right{is_moving_right}{
     if (!texture.loadFromFile("Boss.png")) {
         throw std::logic_error ("Failed to load texture");
     }
@@ -23,6 +23,21 @@ Boss::Boss(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
 }
 Boss::~Boss(){ }
 
+void Boss::shoot(sf::Time &dt) {
+
+    if (shooting_clock.getElapsedTime().asSeconds() >= 3) {
+        std::cout << "shoot\n";
+        shooting_clock.restart();
+        shooting = true;
+    } else
+    {
+        shooting = false;
+    }
+}
+
+bool Boss::can_shoot() {
+    return shooting;
+}
 
 void Boss::update(sf::Time dt) {
     position.x += direction_x * speed * dt.asSeconds();
@@ -37,6 +52,7 @@ void Boss::update(sf::Time dt) {
         }
         is_moving_right = false;
     }
+    shoot(dt);
     sprite.setPosition(position);
 }
 

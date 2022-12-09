@@ -15,12 +15,27 @@ Alien::Alien(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
     sprite.setTexture(texture);
     //background.setSize({1024, 768});
     sprite.setPosition(pos);
-    speed = 5000.f;
+    speed = 3000.f;
     //direction_x = .2f;
 }
 Alien::~Alien(){ std::cout << "Alien destructor called \n";}
 
-bool Alien::can_shoot(){return false;}
+void Alien::shoot(sf::Time &dt) {
+
+    if (shooting_clock.getElapsedTime().asSeconds() >= 2) {
+        std::cout << "shoot\n";
+        shooting_clock.restart();
+        shooting = true;
+    } else
+    {
+        shooting = false;
+    }
+}
+
+bool Alien::can_shoot() {
+    return shooting;
+}
+
 
 void Alien::update(sf::Time dt) {
     position.x += direction_x * speed * dt.asSeconds();
@@ -35,10 +50,11 @@ void Alien::update(sf::Time dt) {
         }
         is_moving_right = false;
     }
+    shoot(dt);
     sprite.setPosition(position);
 }
 
-void Alien::shoot(sf::Time &dt) {} //{ return false;}
+
 
 
 
