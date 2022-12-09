@@ -17,47 +17,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcc6190c-0133-4b5b-b18d-78508327765d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3873cc39c14bed9f6e73.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-adfb973f4bb477d2eac1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-08T14-46-12-0647.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/space_invaders.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/space_invaders.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tdp005-code.iml" beforeDir="false" />
+    <list default="true" id="dcc6190c-0133-4b5b-b18d-78508327765d" name="Changes" comment="Shooting is fixed but the boss is still bugging.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boss.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boss.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boss.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Building.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Building.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Missile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Missile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Missile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Missile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Moveable_Unit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Moveable_Unit.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Moveable_Unit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Moveable_Unit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Unit.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Unit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,8 +210,16 @@
       <workItem from="1670499042004" duration="5942000" />
       <workItem from="1670505413368" duration="4522000" />
       <workItem from="1670510772275" duration="3152000" />
-      <workItem from="1670570250175" duration="24989000" />
+      <workItem from="1670570250175" duration="26066000" />
     </task>
+    <task id="LOCAL-00001" summary="Shooting is fixed but the boss is still bugging.">
+      <created>1670597934772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670597934773</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,5 +238,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Shooting is fixed but the boss is still bugging." />
+    <option name="LAST_COMMIT_MESSAGE" value="Shooting is fixed but the boss is still bugging." />
   </component>
 </project>

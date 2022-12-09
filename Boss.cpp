@@ -31,7 +31,7 @@ void Boss::update(sf::Time dt) {
             rebound_sides();
         }
         is_moving_right = true;
-    } else if (position.x >= 880) {
+    } else if (position.x >= 850) {
         if (is_moving_right){
             rebound_sides();
         }

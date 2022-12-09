@@ -76,7 +76,7 @@ void Game::init() {
     buildings.push_back(shared_ptr<Unit>(new Building({0, 625})));
     buildings.push_back(shared_ptr<Unit>(new Building({385, 625})));
     buildings.push_back(shared_ptr<Unit>(new Building({770, 625})));
-    shooters.push_back(shared_ptr<Moveable_Unit>(new Boss({450, 10}, 3, .2f, false)));
+    shooters.push_back(shared_ptr<Moveable_Unit>(new Boss({450, 10}, 3, .2f, true)));
     //units.push_back(shared_ptr<Missile>(new Missile({450,70}, .2f, false)));
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({400, 150}, 1, .2f, true)));
     shooters.push_back(shared_ptr<Moveable_Unit>(new Alien({200, 300}, 1, .3f, true)));
