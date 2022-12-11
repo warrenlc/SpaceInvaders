@@ -3,7 +3,7 @@
 //
 #include "Alien.h"
 
-#include "Game.h"
+#include "Game.h"q
 #include <iostream>
 
 Alien::Alien(sf::Vector2f pos, int hp, float dir_x, bool is_moving_right)
