@@ -8,4 +8,5 @@
 const int width{1024};
 const int height{768};
 
+
 #endif //UNTITLED3_GLOBAL_VALUES_H

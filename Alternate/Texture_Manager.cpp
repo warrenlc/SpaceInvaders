@@ -14,7 +14,7 @@ sf::Texture *Texture_Manager::get(const string &name) {
     }
     auto *t = new sf::Texture();
     if (!t->loadFromFile(name)) {
-        throw logic_error("Failed to load the texture1!\n");
+        throw logic_error("Failed to load the texture!\n");
     }
     instance.textures.insert(make_pair(name, unique_ptr<sf::Texture>(t)));
     return t;

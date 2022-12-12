@@ -47,6 +47,14 @@ private:
 };
 
 /*
+class Remove_After_Impact : public Component {
+public:
+    Remove_After_Impact() = default;
+    bool update(sf::Time time, Entity &e, World &world) override;
+};
+*/
+
+/*
  * Component for sideways movement of objects
  * */
 class Sideways_Movement : public Component {
@@ -81,17 +89,7 @@ private:
     float speed;
     float direction_y;
 };
-/*
-class Upward_Movement : public Component {
-public:
-    Upward_Movement(float speed)
-    : speed{speed}, direction_y{direction_y = 1.8f} {}
-    bool update(sf::Time, Entity &e, World &world) override;
-private:
-    float speed;
-    float direction_y;
-};
-*/
+
 /*
  * Another movement pattern that moves in a perimeter around a
  * rectangular pre-defined boundary.

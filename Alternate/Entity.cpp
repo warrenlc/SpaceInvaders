@@ -24,5 +24,23 @@ void Entity::add(shared_ptr<Component> component) {
     components.push_back(std::move(component));
 }
 
+float Entity::get_top() {
+    return center.y - (size.y / 2);
+}
 
+float Entity::get_bottom() {
+    return center.y + (size.y / 2);
+}
+
+float Entity::get_left() {
+    return center.x - (size.x / 2) ;
+}
+
+float Entity::get_right() {
+    return center.x + (size.x / 2);
+}
+
+//void Entity::set_life(int l) { life = l; }
+
+//int Entity::get_life() { return life; }
 

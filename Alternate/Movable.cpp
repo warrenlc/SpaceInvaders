@@ -14,17 +14,16 @@ Player_Movement::Player_Movement(float speed)
 
 sf::Vector2f find_direction() {
     sf:: Vector2f direction;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         direction.x -= 1;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         direction.x += 1;
     }
     return direction;
 }
 
 bool Player_Movement::update(sf::Time dt, Entity &entity, World &world) {
-    //int margin{(entity.size.x / 2) + 5};
 
     sf::Vector2f direction = find_direction();
     entity.center += direction * speed * dt.asSeconds();
@@ -50,13 +49,19 @@ bool Remove_Outside::update(sf::Time, Entity &entity, World &world) {
     return true;
 }
 
+/*
+bool Remove_After_Impact::update(sf::Time, Entity &entity, World &world) {
+    if (w)
+}
+*/
+
 void Sideways_Movement::rebound_sides() {
     direction_x = -direction_x;
 }
 
 bool Sideways_Movement::update(sf::Time dt, Entity &entity, World &world) {
     // Entity moving sideways cannot be moved outside the screen
-    //int margin{(entity.size.x/2) + 5};
+
     entity.center.x += direction_x * speed * dt.asMicroseconds() / 1000000.0f;
     if (entity.center.x <= margin(entity)) {
         if (!is_moving_right) {
@@ -76,12 +81,7 @@ bool Vertical_Movement::update(sf::Time dt, Entity &e, World &world) {
     e.center.y += direction_y * speed * dt.asSeconds();
     return true;
 }
-/*
-bool Upward_Movement::update(sf::Time dt, Entity &entity, World &world) {
-    entity.center.y -= direction_y * speed * dt.asSeconds();
-    return true;
-}
-*/
+
 Perimeter_Movement::Perimeter_Movement(float speed, float upper_b, float lower_b, float left_b, float right_b)
         : speed{speed}
         , direction_x{direction_x = .38f}

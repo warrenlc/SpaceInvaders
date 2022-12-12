@@ -5,16 +5,21 @@
 #include "World.h"
 #include "Global_Values.h"
 
+#include <iostream>
+
 void World::update(sf::Time dt) {
     /*
      * use iterators so we can add new entities while iterating
      * */
+
+
     for (size_t i{0}; i < entities.size(); i++) {
         if (!entities[i] -> update(dt, *this)) {
             entities.erase(entities.begin() + i);
             i--;
         }
     }
+
 }
 
 void World::render(sf::RenderWindow &window) {
@@ -31,11 +36,10 @@ void World::add(shared_ptr<Entity> entity) {
  * Check if two entities collide with each other.
  * */
 static bool collides(Entity &a, Entity &b) {
-   /*
-    return ((a.left < b.right && a.right > b.left)
-        && (a.top < b.bottom && a.bottom > b.top));
-*/
-    }
+    auto distance{a.center - b.center};
+    auto lengthSq = std::pow(distance.x, 2) + pow(distance.y, 2);
+    return lengthSq <= pow(a.size.x/2 + b.size.x/2, 2);
+}
 
 vector<shared_ptr<Entity>> World::collides_with(Entity &me) const {
     vector<shared_ptr<Entity>> result;
@@ -50,18 +54,4 @@ vector<shared_ptr<Entity>> World::collides_with(Entity &me) const {
     }
     return result;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

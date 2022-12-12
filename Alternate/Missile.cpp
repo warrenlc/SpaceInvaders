@@ -5,36 +5,49 @@
 #include "Missile.h"
 #include "Movable.h"
 #include "Textured.h"
-#include "Shooting.h"
-#include "Random.h"
+#include "Collides.h"
+#include "Lives.h"
+
 
 
 std::shared_ptr<Entity> create_player_missile(Entity &player) {
-    std::shared_ptr<Entity> e = std::make_shared<Entity>(sf::Vector2f {player.center.x, player.center.y-5});
+    std::shared_ptr<Entity> e
+    = std::make_shared<Entity>(sf::Vector2f
+            {player.center.x, player.center.y - (player.size.y / 2) - 10});
     e->type = Tag::player_missile;
+    e->life = 1;
     e-> add(make_shared<Textured>("Bullet.png"));
     e-> add(make_shared<Vertical_Movement>(1000.f, -1.8f));
-    e->add(make_shared<Remove_Outside>());
+    e-> add(make_shared<Remove_Outside>());
+    e->add(make_shared<Lives>(Tag::player_missile));
     return e;
 }
 
 std::shared_ptr<Entity> create_alien_missile(Entity &enemy) {
-    std::shared_ptr<Entity> e = std::make_shared<Entity>(sf::Vector2f{enemy.center.x, enemy.center.y+5});
+    std::shared_ptr<Entity> e
+    = std::make_shared<Entity>(sf::Vector2f
+            {enemy.center.x, enemy.center.y + 10});
     e->type = Tag::alien_missile;
+    e->life = 1;
     e->add(make_shared<Textured>("Bullet.png"));
-    e->add(make_shared<Vertical_Movement>(500.f, 1.8f));
+    e->add(make_shared<Vertical_Movement>(200.f, 1.8f));
     e->add(make_shared<Remove_Outside>());
+    e->add(make_shared<Collides>(Tag::player));
+    e->add(make_shared<Lives>(Tag::alien_missile));
     return e;
 }
 
 std::shared_ptr<Entity> create_boss_missile(Entity &boss) {
-    std::shared_ptr<Entity> e = std::make_shared<Entity>(sf::Vector2f{boss.center.x, boss.center.y + 5});
+    std::shared_ptr<Entity> e
+    = std::make_shared<Entity>(sf::Vector2f
+            {boss.center.x, boss.center.y + (boss.center.y / 2) + 10});
     e->type = Tag::boss_missile;
-    //e->is_moving_down = true;
-    //e->direction_y = 2.f;
+    e->life = 1;
     e->add(make_shared<Textured>("Bullet.png"));
     e->add(make_shared<Vertical_Movement>(600.f, 1.8f));
     e->add(make_shared<Remove_Outside>());
+
+    e->add(make_shared<Lives>(Tag::boss_missile));
     return e;
 }
 

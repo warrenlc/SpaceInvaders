@@ -7,8 +7,8 @@
 #include "Player.h"
 #include "Alien.h"
 #include "Boss.h"
-#include "Missile.h"
 #include "Global_Values.h"
+#include "Static_Entity.h"
 
 
 Game_State::Game_State() {
@@ -22,9 +22,10 @@ Game_State::Game_State() {
     /*
      * Add Aliens in a row:
      * */
+/*
     for (int i{0}; i < 7; i++) {
         world.add(create_alien({float(i*120), width*0.4f}));
-    }
+    }*/
     /*
      * Add aliens in a diagonal:
      * */
@@ -47,11 +48,11 @@ Game_State::Game_State() {
      * Add a boss
      * */
     world.add(create_boss({width/2, height/15}));
+    world.add(create_static_entity({width/2, height/3}));
 }
 
 shared_ptr<State> Game_State::update(sf::Time dt) {
 
-    // We can have our aliens shoot missiles at the player from time to time.
     world.update(dt);
 
     // Handle pause requests from the user

@@ -21,8 +21,10 @@ Menu_State::Menu_State(const shared_ptr<State>& resume)
     /*
      * Add "new game" and "exit" 'Actions' to our menu 'entries'
      * */
+
     add("New game", []() {return std::make_shared<Game_State>(); });
     add("Exit", []() { return std::make_shared<Exit_State>(); });
+
 }
 
 void Menu_State::add(const string& text, Action action) {

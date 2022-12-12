@@ -11,7 +11,7 @@
 Textured::Textured(const std::string &texture_name) {
     sf::Texture *t = Texture_Manager::get(texture_name);
     auto size = t->getSize();
-    std::cout << to_string(size.x) << std::endl;
+
 
     sprite.setScale(.5f, .5f);
     sprite.setTexture(*t);

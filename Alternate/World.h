@@ -6,8 +6,9 @@
 #define UNTITLED3_WORLD_H
 
 #include <SFML/Graphics.hpp>
-
+#include <cmath>
 #include<memory>
+
 #include "Entity.h"
 #include "Global_Values.h"
 

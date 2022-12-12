@@ -8,6 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include "World.h"
 #include "Component.h"
+#include "Global_Values.h"
 
 class World;
 class Component;
@@ -21,6 +22,7 @@ enum class Tag : size_t {
     alien_missile,
     boss_missile,
     alien_v2,
+    static_entity,
 };
 
 class Entity {
@@ -28,49 +30,58 @@ class Entity {
     /*
      * An Entity in our game is a 'device' or 'object' (entity, actually)
      * which is made up of various components, which can be thought of as
-     * attributes or behaviors. For example, a player, boss, and alien all
-     * have side to side movement. They all have life. Aliens 'spawn' missiles
+     * attributes or behaviors. For example, a player, boss, and alien all move.
+     * They all have life. Aliens 'spawn' missiles
      * and a player decides to shoot them. A missile moves, but does not move
-     * side to side, etc.
+     * side to side, etc. A static entity, such as a stone or a building,
+     * has no life. All entities have a position in the game. As such, they have
+     * a center, a size. All entities have a type.
      * */
 public:
 
     Entity(sf::Vector2f center, sf::Vector2f size = {0,0})
     : center{center}
     , size{size}
-    , type{Tag::unknown} {}
-   // , direction_x{direction_x = 0.f}
+    , type{Tag::unknown}
+    , life{0} {}
 
-    /*, is_moving_right{is_moving_right = false}
-    , is_moving_left{is_moving_left = false}
-    , is_moving_down{is_moving_down = false}
-    , is_moving_up{is_moving_up = false} {}
-*/
     /*
      * By center, we really mean the position of the object. center is
      * how we reference the sprite's position.
      * */
     sf::Vector2f center;
     sf::Vector2f size; // we want to keep track of how large these entities are.
-   /* bool is_moving_right;
-    bool is_moving_left;
-    bool is_moving_down;  // Basis for controlling vertical movement of an entity
-    bool is_moving_up;
-    float direction_x;    // + or - to keep track of direction on x plane.
-    float direction_y;*/    // + or - to keep track of direction in y plane.
     Tag type; // A way to keep track of what it is for an entity
-
+    int life;
 
     bool update(sf::Time dt, World &world); // An entity must be updated
     void render(sf::RenderWindow &window); // An entity must be drawn
     void add(std::shared_ptr<Component> c); // We add components to an entity
+    void set_life(int);
 
-private:
+    float get_top();
+    float get_bottom();
+    float get_right();
+    float get_left();
 
     /*
-     * The entity's components
+    sf::Vector2f get_top();
+    sf::Vector2f get_bottom();
+    sf::Vector2f get_left();
+    sf::Vector2f get_right();
+*/
+   // int get_life();
+
+    //std::vector<std::shared_ptr<Component>> get_components();
+
+private:
+    /*
+     * As every entity has a center and a size,
+     * we can find the center of the edges of our entity
      * */
+   // int life;
     std::vector<std::shared_ptr<Component>> components;
+
 };
 
 
