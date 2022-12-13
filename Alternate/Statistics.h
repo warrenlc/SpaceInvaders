@@ -10,7 +10,7 @@
 #include "Component.h"
 #include "Entity.h"
 
-/*
+/**
  * Display life statistics for an entity on screen
  * */
 

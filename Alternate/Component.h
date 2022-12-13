@@ -11,7 +11,7 @@
 class Entity;
 class World;
 /**
- *
+ *Component is an attribute to an entity.
  */
 
 class Component {
@@ -22,7 +22,7 @@ public:
 
   /**
      * update the activity of components
-     * */
+     **/
     virtual bool update(sf::Time dt, Entity &entity, World &world);
 
   /**

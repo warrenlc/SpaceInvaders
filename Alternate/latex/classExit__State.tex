@@ -1,0 +1,53 @@
+\hypertarget{classExit__State}{}\doxysection{Exit\+\_\+\+State Class Reference}
+\label{classExit__State}\index{Exit\_State@{Exit\_State}}
+
+
+{\ttfamily \#include $<$State.\+h$>$}
+
+
+
+Inheritance diagram for Exit\+\_\+\+State\+:
+% FIG 0
+
+
+Collaboration diagram for Exit\+\_\+\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classState}{State}} $>$ \mbox{\hyperlink{classExit__State_af4bd89fa519cc82fb7268c34cce742bd}{update}} (sf\+::\+Time)
+\item 
+void \mbox{\hyperlink{classExit__State_a1a23206a0f71e41405458f27b1e22d3c}{render}} (sf\+::\+Render\+Window \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An exit state is what we use to leave a state safely. It is a child of the more general \mbox{\hyperlink{classState}{State}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classExit__State_a1a23206a0f71e41405458f27b1e22d3c}\label{classExit__State_a1a23206a0f71e41405458f27b1e22d3c}} 
+\index{Exit\_State@{Exit\_State}!render@{render}}
+\index{render@{render}!Exit\_State@{Exit\_State}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Exit\+\_\+\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Given a reference to a window, draw this window. 
+
+Implements \mbox{\hyperlink{classState_a5e6bc0be5de2fc18dcee83f830f5737b}{State}}.
+
+\mbox{\Hypertarget{classExit__State_af4bd89fa519cc82fb7268c34cce742bd}\label{classExit__State_af4bd89fa519cc82fb7268c34cce742bd}} 
+\index{Exit\_State@{Exit\_State}!update@{update}}
+\index{update@{update}!Exit\_State@{Exit\_State}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classState}{State}}$>$ Exit\+\_\+\+State\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Given a timestamp, return a nullptr to a state. 
+
+Implements \mbox{\hyperlink{classState_a8d392a9333f074e0ddba364558448311}{State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+State.\+h\end{DoxyCompactItemize}

@@ -6,6 +6,9 @@
 #define UNTITLED3_COLLIDES_H
 
 #include "Component.h"
+/**
+ *Collides check if components collide with each other. 
+ */
 
 class Collides : public Component{
 

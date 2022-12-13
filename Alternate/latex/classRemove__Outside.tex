@@ -1,0 +1,44 @@
+\hypertarget{classRemove__Outside}{}\doxysection{Remove\+\_\+\+Outside Class Reference}
+\label{classRemove__Outside}\index{Remove\_Outside@{Remove\_Outside}}
+
+
+{\ttfamily \#include $<$Movable.\+h$>$}
+
+
+
+Inheritance diagram for Remove\+\_\+\+Outside\+:
+% FIG 0
+
+
+Collaboration diagram for Remove\+\_\+\+Outside\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRemove__Outside_a9d779d0a54bbbd13a6defa988b0e4196}\label{classRemove__Outside_a9d779d0a54bbbd13a6defa988b0e4196}} 
+{\bfseries Remove\+\_\+\+Outside} (float margin=0.\+1f)
+\item 
+bool \mbox{\hyperlink{classRemove__Outside_aae70c22dfadb373c35676adc499ef90f}{update}} (sf\+::\+Time time, \mbox{\hyperlink{classEntity}{Entity}} \&e, \mbox{\hyperlink{classWorld}{World}} \&world) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Applies to entities reaching the edge of the screen vertically. Entities that go into the sky disappear. Entities that crash into the ground are destroyed. Entities that touch the sides cannot leave the sides. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRemove__Outside_aae70c22dfadb373c35676adc499ef90f}\label{classRemove__Outside_aae70c22dfadb373c35676adc499ef90f}} 
+\index{Remove\_Outside@{Remove\_Outside}!update@{update}}
+\index{update@{update}!Remove\_Outside@{Remove\_Outside}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Remove\+\_\+\+Outside\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{dt,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{entity,  }\item[{\mbox{\hyperlink{classWorld}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update the activity of components 
+
+Reimplemented from \mbox{\hyperlink{classComponent_a70b266d39f46fa160e2ab4917839216e}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Movable.\+h\item 
+Movable.\+cpp\end{DoxyCompactItemize}

@@ -10,7 +10,7 @@
 
 #include <memory>
 
-/*
+/**
  * This is where we will enter the game "world", i.e. where the game is played
  * */
 

@@ -1,0 +1,43 @@
+\hypertarget{classWorld}{}\doxysection{World Class Reference}
+\label{classWorld}\index{World@{World}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWorld_ac7b3a3923c95b812ec2d00d97c8cd56e}\label{classWorld_ac7b3a3923c95b812ec2d00d97c8cd56e}} 
+void {\bfseries update} (sf\+::\+Time dt)
+\item 
+\mbox{\Hypertarget{classWorld_a6be69ff54f7f29713c0954cabe34aecc}\label{classWorld_a6be69ff54f7f29713c0954cabe34aecc}} 
+void {\bfseries render} (sf\+::\+Render\+Window \&window)
+\item 
+void \mbox{\hyperlink{classWorld_ad3ddf8798897c318dc7e0d3d024dd1e7}{add}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ entity)
+\item 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ $>$ \mbox{\hyperlink{classWorld_ac45c1d662756cdbea895ccc9988d6bee}{collides\+\_\+with}} (\mbox{\hyperlink{classEntity}{Entity}} \&me) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classWorld}{World}} builds the world with the units that get added and deals with collisions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWorld_ad3ddf8798897c318dc7e0d3d024dd1e7}\label{classWorld_ad3ddf8798897c318dc7e0d3d024dd1e7}} 
+\index{World@{World}!add@{add}}
+\index{add@{add}!World@{World}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void World\+::add (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$}]{entity }\end{DoxyParamCaption})}
+
+Add a unit to our world \mbox{\Hypertarget{classWorld_ac45c1d662756cdbea895ccc9988d6bee}\label{classWorld_ac45c1d662756cdbea895ccc9988d6bee}} 
+\index{World@{World}!collides\_with@{collides\_with}}
+\index{collides\_with@{collides\_with}!World@{World}}
+\doxysubsubsection{\texorpdfstring{collides\_with()}{collides\_with()}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ $>$ World\+::collides\+\_\+with (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{me }\end{DoxyParamCaption}) const}
+
+A unit checks if another unit collides with itself 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+World.\+h\item 
+World.\+cpp\end{DoxyCompactItemize}

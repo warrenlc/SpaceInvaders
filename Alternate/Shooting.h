@@ -7,6 +7,9 @@
 #include "Component.h"
 #include "Missile.h"
 
+/**
+ *Component that handles player's shooting attribute. 
+ */
 class Player_Shooting : public Component {
 public:
     Player_Shooting();

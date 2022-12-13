@@ -10,9 +10,12 @@
 
 using namespace std;
 /*
- * This file is aollection of various components
+ * This file is allocetion of various components
  * that deal with visual elements of the game.
  * */
+/**
+ *Textured is a component that deals with visual elements of the game. 
+ */
 
 class Textured : public Component {
 public:

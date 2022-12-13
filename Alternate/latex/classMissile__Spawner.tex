@@ -1,0 +1,44 @@
+\hypertarget{classMissile__Spawner}{}\doxysection{Missile\+\_\+\+Spawner Class Reference}
+\label{classMissile__Spawner}\index{Missile\_Spawner@{Missile\_Spawner}}
+
+
+{\ttfamily \#include $<$Missile.\+h$>$}
+
+
+
+Inheritance diagram for Missile\+\_\+\+Spawner\+:
+% FIG 0
+
+
+Collaboration diagram for Missile\+\_\+\+Spawner\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMissile__Spawner_ad8b08e113db1411b8da8da83bd4be79f}\label{classMissile__Spawner_ad8b08e113db1411b8da8da83bd4be79f}} 
+{\bfseries Missile\+\_\+\+Spawner} (sf\+::\+Time spawn\+\_\+interval, std\+::function$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$(\mbox{\hyperlink{classEntity}{Entity}} \&)$>$ create)
+\item 
+bool \mbox{\hyperlink{classMissile__Spawner_a14c3dc934709c9c2da46578cbd168064}{update}} (sf\+::\+Time, \mbox{\hyperlink{classEntity}{Entity}} \&entity, \mbox{\hyperlink{classWorld}{World}} \&world) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Missile spawner handles the spawning of missiles in a time interval when boss and alien attacks. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMissile__Spawner_a14c3dc934709c9c2da46578cbd168064}\label{classMissile__Spawner_a14c3dc934709c9c2da46578cbd168064}} 
+\index{Missile\_Spawner@{Missile\_Spawner}!update@{update}}
+\index{update@{update}!Missile\_Spawner@{Missile\_Spawner}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Missile\+\_\+\+Spawner\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{dt,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{entity,  }\item[{\mbox{\hyperlink{classWorld}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update the activity of components 
+
+Reimplemented from \mbox{\hyperlink{classComponent_a70b266d39f46fa160e2ab4917839216e}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Missile.\+h\item 
+Missile.\+cpp\end{DoxyCompactItemize}

@@ -18,9 +18,12 @@
 
 const int margin(Entity &e);
 
+/**
+ *Component for movement of the player. 
+ */
 class Player_Movement : public Component {
 public:
-    /*
+  /**
      * The speed of the player
      * */
     Player_Movement(float speed);
@@ -31,10 +34,11 @@ private:
     float speed;
 };
 
-/* Applies to objects reaching the edge of the screen vertically.
- * Objects that go into the sky disappear. Objects that
+/**
+ * Applies to entities reaching the edge of the screen vertically.
+ * Entities that go into the sky disappear. Entities that
  * crash into the ground are destroyed.
- * Objects that touch the sides cannot leave the sides.
+ * Entities that touch the sides cannot leave the sides.
  * */
 class Remove_Outside : public Component {
 public:
@@ -54,8 +58,8 @@ public:
 };
 */
 
-/*
- * Component for sideways movement of objects
+/**
+ * Component for sideways movement of entities
  * */
 class Sideways_Movement : public Component {
 public:
@@ -75,8 +79,8 @@ private:
 };
 
 
-/*
- * Component for downward movement of objects
+/**
+ * Component for downward movement of entities
  * */
 class Vertical_Movement : public Component {
 public:
@@ -90,7 +94,7 @@ private:
     float direction_y;
 };
 
-/*
+/**
  * Another movement pattern that moves in a perimeter around a
  * rectangular pre-defined boundary.
  * */

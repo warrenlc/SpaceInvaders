@@ -1,0 +1,56 @@
+\hypertarget{classCollides}{}\doxysection{Collides Class Reference}
+\label{classCollides}\index{Collides@{Collides}}
+
+
+{\ttfamily \#include $<$Collides.\+h$>$}
+
+
+
+Inheritance diagram for Collides\+:
+% FIG 0
+
+
+Collaboration diagram for Collides\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCollides_acded6b3b459bf1eb570ce363f79be7c5}\label{classCollides_acded6b3b459bf1eb570ce363f79be7c5}} 
+{\bfseries Collides} (Tag collides\+\_\+with)
+\item 
+bool \mbox{\hyperlink{classCollides_a9da8751c7e7f5acccd75d4efa4e506fe}{update}} (sf\+::\+Time, \mbox{\hyperlink{classEntity}{Entity}} \&e, \mbox{\hyperlink{classWorld}{World}} \&world) override
+\item 
+void \mbox{\hyperlink{classCollides_a2eb2730d2c6196c6fc1bcc778652d569}{render}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classEntity}{Entity}} \&entity) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCollides}{Collides}} check if components collide with each other. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCollides_a2eb2730d2c6196c6fc1bcc778652d569}\label{classCollides_a2eb2730d2c6196c6fc1bcc778652d569}} 
+\index{Collides@{Collides}!render@{render}}
+\index{render@{render}!Collides@{Collides}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Collides\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render these functionalities 
+
+Reimplemented from \mbox{\hyperlink{classComponent_a3a2dfb75bb55724d03f788664075d5ab}{Component}}.
+
+\mbox{\Hypertarget{classCollides_a9da8751c7e7f5acccd75d4efa4e506fe}\label{classCollides_a9da8751c7e7f5acccd75d4efa4e506fe}} 
+\index{Collides@{Collides}!update@{update}}
+\index{update@{update}!Collides@{Collides}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Collides\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{dt,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{entity,  }\item[{\mbox{\hyperlink{classWorld}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update the activity of components 
+
+Reimplemented from \mbox{\hyperlink{classComponent_a70b266d39f46fa160e2ab4917839216e}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Collides.\+h\item 
+Collides.\+cpp\end{DoxyCompactItemize}

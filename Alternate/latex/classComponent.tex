@@ -1,0 +1,52 @@
+\hypertarget{classComponent}{}\doxysection{Component Class Reference}
+\label{classComponent}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+
+
+Inheritance diagram for Component\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComponent_aac563d0b96cb21493392025f10e62909}\label{classComponent_aac563d0b96cb21493392025f10e62909}} 
+virtual void {\bfseries added} (\mbox{\hyperlink{classEntity}{Entity}} \&e)
+\item 
+virtual bool \mbox{\hyperlink{classComponent_a70b266d39f46fa160e2ab4917839216e}{update}} (sf\+::\+Time dt, \mbox{\hyperlink{classEntity}{Entity}} \&entity, \mbox{\hyperlink{classWorld}{World}} \&world)
+\item 
+virtual void \mbox{\hyperlink{classComponent_a3a2dfb75bb55724d03f788664075d5ab}{render}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classEntity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classComponent}{Component}} is an attribute to an entity. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classComponent_a3a2dfb75bb55724d03f788664075d5ab}\label{classComponent_a3a2dfb75bb55724d03f788664075d5ab}} 
+\index{Component@{Component}!render@{render}}
+\index{render@{render}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Component\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Render these functionalities 
+
+Reimplemented in \mbox{\hyperlink{classCollides_a2eb2730d2c6196c6fc1bcc778652d569}{Collides}}, \mbox{\hyperlink{classTextured_a53ef060b5876ea68c5fb6c048783e62b}{Textured}}, and \mbox{\hyperlink{classStatistics_a9ce2fee76c88bcd6436f3dca2416e0ff}{Statistics}}.
+
+\mbox{\Hypertarget{classComponent_a70b266d39f46fa160e2ab4917839216e}\label{classComponent_a70b266d39f46fa160e2ab4917839216e}} 
+\index{Component@{Component}!update@{update}}
+\index{update@{update}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Component\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{dt,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{entity,  }\item[{\mbox{\hyperlink{classWorld}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+update the activity of components 
+
+Reimplemented in \mbox{\hyperlink{classMissile__Spawner_a14c3dc934709c9c2da46578cbd168064}{Missile\+\_\+\+Spawner}}, \mbox{\hyperlink{classStatistics_a2abb2050641fa7364cd8372314ebb965}{Statistics}}, \mbox{\hyperlink{classPlayer__Shooting_a5f399f86d386232aa52eb9003613d23d}{Player\+\_\+\+Shooting}}, \mbox{\hyperlink{classPerimeter__Movement_a0185a65db60f6e84b44b6dfb3b8efdd4}{Perimeter\+\_\+\+Movement}}, \mbox{\hyperlink{classVertical__Movement_a2b23dbf300c23d9e08642a3eedf4cd9d}{Vertical\+\_\+\+Movement}}, \mbox{\hyperlink{classSideways__Movement_a6824f283f73c43782768eb414412d714}{Sideways\+\_\+\+Movement}}, \mbox{\hyperlink{classCollides_a9da8751c7e7f5acccd75d4efa4e506fe}{Collides}}, \mbox{\hyperlink{classRemove__Outside_aae70c22dfadb373c35676adc499ef90f}{Remove\+\_\+\+Outside}}, \mbox{\hyperlink{classPlayer__Movement_af8a2d06576a6f4c25c5256846ae18599}{Player\+\_\+\+Movement}}, and \mbox{\hyperlink{classLives_a7ecbf3c4ecfb95967135316a05033f06}{Lives}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Component.\+h\item 
+Component.\+cpp\end{DoxyCompactItemize}

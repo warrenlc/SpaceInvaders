@@ -17,18 +17,22 @@ class Entity;
 
 using namespace std;
 
+/**
+ *World builds the world with the units that get added and deals with collisions. 
+ */
+
 class World {
 public:
     void update(sf::Time dt);
 
     void render(sf::RenderWindow &window);
 
-    /*
+  /**
      * Add a unit to our world
      * */
-    void add(std::shared_ptr<Entity> entity);
+    void add(shared_ptr<Entity> entity);
 
-    /*
+  /**
      * A unit checks if another unit collides with itself
      * */
     vector<shared_ptr<Entity>> collides_with(Entity &me) const;
