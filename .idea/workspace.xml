@@ -21,9 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcc6190c-0133-4b5b-b18d-78508327765d" name="Changes" comment="Shooting is fixed but the boss is still bugging.">
+      <change afterPath="$PROJECT_DIR$/Alternate/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfml" beforeDir="false" afterPath="$PROJECT_DIR$/sfml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +216,7 @@
       <workItem from="1670570250175" duration="26066000" />
       <workItem from="1670602006319" duration="3376000" />
       <workItem from="1670685924312" duration="1054000" />
+      <workItem from="1670926125725" duration="1506000" />
     </task>
     <task id="LOCAL-00001" summary="Shooting is fixed but the boss is still bugging.">
       <created>1670597934772</created>
