@@ -1,17 +1,52 @@
 cmake_minimum_required(VERSION 3.22)
 project(SpaceInvaders)
 
-set(CMAKE_CXX_STANDARD 17)
-
+#set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -g -Wall -Wextra")
 
-set(SOURCE_FILES SpaceInvaders main.cpp State.cpp Menu_State.cpp Game_State.cpp
-        World.cpp Entity.cpp Component.cpp Texture_Manager.cpp
-        Player.cpp Textured.cpp Random.cpp Movable.cpp Alien.cpp
-        Boss.cpp Shooting.cpp Missile.cpp Collides.cpp Lives.cpp
-        Static_Entity.cpp Statistics.cpp)
-# På skolans Linux - system finns det två versioner av SFML. Se efter vilken som används :
-if ( DEFINED ENV{LOADEDMODULES} AND ("$ENV{LOADEDMODULES}" MATCHES ".*SpaceInvaders/gcc/6.1.0.*"))
+set(SOURCE_FILES
+    Alien.cpp
+    Alien.h
+    Boss.cpp
+    Boss.h
+    Collides.cpp
+    Collides.h
+    Component.cpp
+    Component.h
+    Entity.cpp
+    Entity.h
+    Game_State.cpp
+    Game_State.h
+    Global_Values.h
+    Lives.cpp
+    Lives.h
+    main.cpp
+    Menu_State.cpp
+    Menu_State.h
+    Missile.cpp
+    Missile.h
+    Movable.cpp
+    Movable.h
+    Player.cpp
+    Player.h
+    Random.cpp
+    Random.h
+    Shooting.cpp
+    Shooting.h
+    State.cpp
+    State.h
+    Static_Entity.cpp
+    Static_Entity.h
+    Statistics.cpp
+    Statistics.h
+    Texture_Manager.cpp
+    Texture_Manager.h
+    Textured.cpp
+    Textured.h
+    World.cpp
+    World.h)
+
+if ( DEFINED ENV{LOADEDMODULES} AND ("$ENV{LOADEDMODULES}" MATCHES ".*prog/gcc/6.1.0.*"))
     set(CMAKE_CXX_COMPILER /sw/gcc -6.1.0/ bin/g++)
     if (DEFINED ENV{SFML_ROOT})
         list( APPEND CMAKE_MODULE_PATH "$ENV{SFML_ROOT}/share/SFML/cmake/Modules")
@@ -30,5 +65,16 @@ if (NOT (${SFML_FOUND} STREQUAL "TRUE "))
     endforeach (i)
 endif ()
 
+set(SFML_MODULES network graphics window system)
+
+foreach(i ${SFML_MODULES})
+    list(APPEND SFML_LIBRARIES "sfml-${i}")
+endforeach(i)
+
+
+
+
 add_executable(SpaceInvaders ${SOURCE_FILES})
-target_link_libraries (SpaceInvaders ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+
+target_link_libraries(SpaceInvaders ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+
