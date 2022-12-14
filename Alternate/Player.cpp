@@ -24,8 +24,8 @@ std::shared_ptr<Entity> create_player() {
     e->add(make_shared<Player_Movement>(800.f));
     e->add(make_shared<Player_Shooting>());
     e->add(make_shared<Collides>(Tag::boss_missile));
-   // e->add(make_shared<Collides>(Tag::alien_missile));
-   // e->add(make_shared<Lives>(Tag::player));
-   // e->add(make_shared<Statistics>("Gameplay.ttf"));
+    e->add(make_shared<Collides>(Tag::alien_missile));
+    e->add(make_shared<Lives>(Tag::player));
+    e->add(make_shared<Statistics>("Gameplay.ttf"));
     return e;
 }

@@ -11,14 +11,6 @@
 
 
 using namespace std;
-
-/*
-static const map<Tag, int> lives{ {Tag::player, 10}, {Tag::alien, 5},
-                                  {Tag::alien_v2, 7}, {Tag::boss, 10},
-                                  {Tag::player_missile, 1}, {Tag::boss_missile, 1},
-                                  {Tag::alien_missile, 1}, {Tag::static_entity, 0} };
-*/
-
 /**
  *Lives is a component that gives the attribute to handle the amount of lives entities have. 
  */

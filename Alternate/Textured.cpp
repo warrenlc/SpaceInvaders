@@ -27,14 +27,5 @@ void Textured::added(Entity &e) {
 void Textured::render(sf::RenderWindow &window, Entity &e) {
     sprite.setPosition(e.center);
     window.draw(sprite);
-   /*
-    sf::RectangleShape rect({sprite.getLocalBounds().width, sprite.getLocalBounds().height});
-
-    rect.setPosition(sprite.getPosition());
-    rect.setFillColor(sf::Color::Transparent);
-    rect.setOutlineColor(sf::Color::Red);
-    rect.setOutlineThickness(2.0f);
-    window.draw(rect);
-*/
 }
 

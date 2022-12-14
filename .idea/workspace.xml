@@ -19,31 +19,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcc6190c-0133-4b5b-b18d-78508327765d" name="Changes" comment="Shooting is fixed but the boss is still bugging.">
-      <change afterPath="$PROJECT_DIR$/Alternate/SpaceInvaders" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alternate/asteroid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alternate/level1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alternate/level2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alternate/level3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alternate/Alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Alien.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Alien.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Alien.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Boss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Boss.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Entity.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Entity.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Game_State.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Game_State.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Game_State.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Game_State.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Menu_State.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Menu_State.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/Collides.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Collides.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/Lives.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Lives.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/Lives.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Lives.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alternate/Missile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Missile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Movable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Movable.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alternate/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/SpaceInvaders" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/SpaceInvaders" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alternate/Static_Entity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Static_Entity.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Static_Entity.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Static_Entity.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_state.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_state.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-adfb973f4bb477d2eac1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-08T14-46-12-0647.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/Textured.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Textured.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +225,7 @@
       <workItem from="1670928104187" duration="631000" />
       <workItem from="1670944635073" duration="86000" />
       <workItem from="1670949384693" duration="632000" />
-      <workItem from="1671002447105" duration="8308000" />
+      <workItem from="1671002447105" duration="13935000" />
     </task>
     <task id="LOCAL-00001" summary="Shooting is fixed but the boss is still bugging.">
       <created>1670597934772</created>

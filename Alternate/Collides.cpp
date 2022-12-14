@@ -6,7 +6,7 @@
 
 Collides::Collides(Tag collides_with)
 : collides_with{collides_with}, clock{} {
-    damage.setFillColor(sf::Color(255, 178, 104, 208));
+    damage.setFillColor(sf::Color::Transparent);
 }
 
 bool Collides::update(sf::Time dt, Entity &entity, World &world) {
@@ -15,34 +15,35 @@ bool Collides::update(sf::Time dt, Entity &entity, World &world) {
     if (damage_visible <= sf::Time{}) {
         damage_visible = sf::Time{};
     }
-    for (auto &collision : world.collides_with(entity)) {
+    for (auto &collision: world.collides_with(entity)) {
         if (collision->type == collides_with) {
-            damage_visible = sf::milliseconds(1200);
+           damage_visible = sf::milliseconds(400);
             hit = true;
         }
-    }
-    if (hit && clock.getElapsedTime() >= damage_visible) {
-        entity.life --;
-        clock.restart();
+        if (hit && clock.getElapsedTime() >= damage_visible) {
+            entity.life--;
+            clock.restart();
+        }
     }
     return true;
+
 }
 
 void Collides::render(sf::RenderWindow &window, Entity &entity) {
     if (damage_visible > sf::Time{}) {
         if (entity.type == Tag::player) {
-            damage.setFillColor(sf::Color::Cyan);
+            damage.setFillColor(sf::Color(19, 246, 223, 208));
         }
         else if (entity.type == Tag::boss) {
-            damage.setFillColor(sf::Color::Red);
+            damage.setFillColor(sf::Color(255, 175, 14, 208));
         }
         else if (entity.type == Tag::alien
                  || entity.type  == Tag::alien_v2) {
-            damage.setFillColor(sf::Color::Magenta);
+            damage.setFillColor(sf::Color(255, 102, 255, 208));
         }
-        damage.setRadius(60);
-        damage.setOrigin(entity.size.x - 5,46);
-        damage.setPosition(entity.center);
+        damage.setRadius(20);
+        damage.setOrigin(entity.size.x / 2, entity.size.y / 2);
+        damage.setPosition(entity.center.x + 10, entity.center.y - 18);
         window.draw(damage);
     }
 }
