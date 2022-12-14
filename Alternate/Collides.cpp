@@ -17,8 +17,14 @@ bool Collides::update(sf::Time dt, Entity &entity, World &world) {
     }
     for (auto &collision: world.collides_with(entity)) {
         if (collision->type == collides_with) {
-           damage_visible = sf::milliseconds(400);
+           damage_visible = sf::milliseconds(900);
             hit = true;
+            if ((collision->type == Tag::static_entity && entity.type == Tag::boss_missile)
+                || (collision->type == Tag::static_entity && entity.type == Tag::alien_missile)
+                || collision->type == Tag::static_entity && entity.type == Tag::player_missile) {
+                return false;
+            }
+
         }
         if (hit && clock.getElapsedTime() >= damage_visible) {
             entity.life--;

@@ -11,12 +11,11 @@
 
 #include "Entity.h"
 #include "Global_Values.h"
-
+#include <sstream>
 
 class Entity;
 
 using namespace std;
-
 /**
  *World builds the world with the units that get added and deals with collisions. 
  */
@@ -30,19 +29,21 @@ public:
   /**
      * Add a unit to our world
      * */
-    void add(shared_ptr<Entity> entity);
+    void add(std::shared_ptr<Entity> entity);
 
   /**
      * A unit checks if another unit collides with itself
      * */
-    vector<shared_ptr<Entity>> collides_with(Entity &me) const;
+    std::vector<std::shared_ptr<Entity>> collides_with(Entity &me) const;
 private:
     /*
-     * We need a vector of all units in the game
+     * We need a vector of all entities in the game
      * */
-
-    vector<shared_ptr<Entity>> entities;
-
+    std::vector<std::shared_ptr<Entity>> entities;
+    bool player_alive = false;
+    sf::Text text;
+    sf::Font font;
+    std::stringstream ss;
 };
 
 

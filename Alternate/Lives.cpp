@@ -12,7 +12,6 @@ Lives::Lives(Tag type)
 : type{type}, counter{} {
 }
 
-
 bool Lives::update(sf::Time dt, Entity &entity, World &world) {
     if (entity.life == 0) {
         return false;

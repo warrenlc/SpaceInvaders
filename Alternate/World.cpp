@@ -7,18 +7,25 @@
 
 #include <iostream>
 
+
+
 void World::update(sf::Time dt) {
     /*
      * use iterators so we can add new entities while iterating
      * */
-
 
     for (size_t i{0}; i < entities.size(); i++) {
         if (!entities[i] -> update(dt, *this)) {
             entities.erase(entities.begin() + i);
             i--;
         }
+     /*   if (entities[i]->type == Tag::player) {
+            player_alive = true;
+        }*/
     }
+   /* if (!player_alive) {
+        return false;
+    }*/
 
 }
 
@@ -26,9 +33,20 @@ void World::render(sf::RenderWindow &window) {
     for (auto &x : entities) {
         x->render(window);
     }
+   /* if (!player_alive) {
+
+        font.loadFromFile("Gameplay.ttf");
+        text.setFont(font);
+        text.setFillColor(sf::Color::Yellow);
+        text.setCharacterSize(45);
+        text.setPosition(100, height/2);
+        ss << "Game Over!\nPress 'Esc' to return to Menu!";
+        text.setString(ss.str());
+        window.draw(text);
+    }*/
 }
 
-void World::add(shared_ptr<Entity> entity) {
+void World::add(std::shared_ptr<Entity> entity) {
     entities.push_back(entity);
 }
 
@@ -37,12 +55,12 @@ void World::add(shared_ptr<Entity> entity) {
  * */
 static bool collides(Entity &a, Entity &b) {
     auto distance{a.center - b.center};
-    auto lengthSq = std::pow(distance.x, 2) + pow(distance.y, 2);
-    return lengthSq <= pow(a.size.x/2 + b.size.x/2, 2);
+    auto lengthSq = std::pow(distance.x, 2) + std::pow(distance.y, 2);
+    return lengthSq <= std::pow(a.size.x/2 + b.size.x/2, 2);
 }
 
-vector<shared_ptr<Entity>> World::collides_with(Entity &me) const {
-    vector<shared_ptr<Entity>> result;
+std::vector<std::shared_ptr<Entity>> World::collides_with(Entity &me) const {
+    std::vector<std::shared_ptr<Entity>> result;
 
     for (auto &x: entities) {
         if (x.get() == &me) {

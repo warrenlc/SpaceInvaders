@@ -83,7 +83,7 @@ Game_State::Game_State(std::string level_file) {
 
 shared_ptr<State> Game_State::update(sf::Time dt) {
 
-    world.update(dt);
+   world.update(dt);
 
     // Handle pause requests from the user
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
