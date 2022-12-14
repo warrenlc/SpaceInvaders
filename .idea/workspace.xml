@@ -19,15 +19,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcc6190c-0133-4b5b-b18d-78508327765d" name="Changes" comment="Shooting is fixed but the boss is still bugging.">
+      <change afterPath="$PROJECT_DIR$/Alternate/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Alternate/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Boss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Boss.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Collides.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Collides.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Game_State.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Game_State.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Lives.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Lives.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/Missile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/Missile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alternate/SpaceInvaders" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/SpaceInvaders" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alternate/World.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/World.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alternate/World.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/World.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alternate/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Alternate/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,11 @@
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.4" />
   </component>
   <component name="ProjectId" id="2IZkYsuvS3l8q8uEQFKpBGRieqo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -225,7 +230,7 @@
       <workItem from="1670944635073" duration="86000" />
       <workItem from="1670949384693" duration="632000" />
       <workItem from="1671002447105" duration="14020000" />
-      <workItem from="1671019014820" duration="4146000" />
+      <workItem from="1671019014820" duration="5687000" />
     </task>
     <task id="LOCAL-00001" summary="Shooting is fixed but the boss is still bugging.">
       <created>1670597934772</created>
