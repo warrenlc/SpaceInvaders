@@ -1,0 +1,3 @@
+/home/albha/TDP005/space_invaders/Alternate/CMakeFiles/SpaceInvaders.dir
+/home/albha/TDP005/space_invaders/Alternate/CMakeFiles/edit_cache.dir
+/home/albha/TDP005/space_invaders/Alternate/CMakeFiles/rebuild_cache.dir
