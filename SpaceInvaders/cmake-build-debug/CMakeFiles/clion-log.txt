@@ -1,4 +1,0 @@
-Cannot generate into /home/albha/TDP005/space_invaders/Alternate
-It is already used for project /home/warcr/CLionProjects/untitled3
-
-Please either delete it manually or select another generation directory
