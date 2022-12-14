@@ -7,6 +7,6 @@
 #include "Entity.h"
 
 
-std::shared_ptr<Entity> create_static_entity(sf::Vector2f start_position);
+std::shared_ptr<Entity> create_static_entity(sf::Vector2f start_position, std::string image);
 
 #endif //UNTITLED3_STATIC_ENTITY_H

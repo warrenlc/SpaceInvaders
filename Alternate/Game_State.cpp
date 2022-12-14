@@ -10,32 +10,62 @@
 #include "Global_Values.h"
 #include "Static_Entity.h"
 
+#include<fstream>
 
-Game_State::Game_State() {
+
+Game_State::Game_State(std::string level_file) {
     /*
      * A player, with a given position, is in the game upon initialization
      * */
-    // Here is where we will load our stage as well...I think
+
     world.add(create_player());
     // Add a group of aliens
+    std::ifstream ifs{level_file};
+    std::string entity_type;
+    std::string sprite_image;
+    float x_coord;
+    float y_coord;
+    if (ifs) {
+        while (ifs) {
+            ifs >> entity_type >> sprite_image
+                >> x_coord >> y_coord;
+            if (entity_type == "alien") {
+                for (int i{1}; i < 8; i++) {
+                    world.add(create_alien({float(i * x_coord), width * y_coord}, sprite_image));
+                }
+            }
+            if (entity_type == "alien2") {
+                int coord{1};
+                while (coord <= 6) {
+                    world.add(create_alien_v2({float(coord * x_coord), float(coord * y_coord)}, sprite_image));
+                    coord += 1;
+                }
+            }
+            if (entity_type == "static_entity") {
+                world.add(create_static_entity({width*x_coord, height*y_coord}, sprite_image));
+            }
+        }
+
+    }
 
     /*
      * Add Aliens in a row:
      * */
 /*
-    for (int i{0}; i < 7; i++) {
+    for (int i{1}; i < 8; i++) {
         world.add(create_alien({float(i*120), width*0.4f}));
     }*/
     /*
      * Add aliens in a diagonal:
      * */
 
+    /*
     int coord{1};
     while (coord <= 4) {
         world.add(create_alien_v2({float(coord*100), float(coord* 100)}));
         coord += 1;
     }
-
+*/
     /* Can do a grid pattern as well, but then must handle them colliding with each other.
     for (int x{1}; x <= 4;  x++) {
         for (int y{1}; y <= 4; y++) {
@@ -48,7 +78,7 @@ Game_State::Game_State() {
      * Add a boss
      * */
     world.add(create_boss({width/2, height/15}));
-    world.add(create_static_entity({width/2, height/3}));
+
 }
 
 shared_ptr<State> Game_State::update(sf::Time dt) {

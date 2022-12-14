@@ -7,7 +7,7 @@
 
 #include "Entity.h"
 
-std::shared_ptr<Entity> create_alien(sf::Vector2f start_position);
-std::shared_ptr<Entity> create_alien_v2(sf::Vector2f start_position);
+std::shared_ptr<Entity> create_alien(sf::Vector2f start_position, std::string image);
+std::shared_ptr<Entity> create_alien_v2(sf::Vector2f start_position, std::string image);
 
 #endif //UNTITLED3_ALIEN_H

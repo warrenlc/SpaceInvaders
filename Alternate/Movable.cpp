@@ -14,10 +14,12 @@ Player_Movement::Player_Movement(float speed)
 
 sf::Vector2f find_direction() {
     sf:: Vector2f direction;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)
+        || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         direction.x -= 1;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)
+        || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         direction.x += 1;
     }
     return direction;

@@ -9,6 +9,7 @@
 #include "World.h"
 #include "Component.h"
 #include "Global_Values.h"
+#include <string>
 
 class World;
 class Component;
@@ -45,14 +46,16 @@ public:
      * how we reference the sprite's position.
      * */
   
-    Entity(sf::Vector2f center, sf::Vector2f size = {0,0})
+    Entity(sf::Vector2f center, std::string image_file, sf::Vector2f size = {0,0})
     : center{center}
+    , image_file(image_file)
     , size{size}
     , type{Tag::unknown}
     , life{0} {}
 
 
     sf::Vector2f center;
+    std::string image_file;
     sf::Vector2f size; 
     Tag type;
     int life;

@@ -8,6 +8,7 @@
 #include "State.h"
 #include "World.h"
 
+#include <string>
 #include <memory>
 
 /**
@@ -16,7 +17,7 @@
 
 class Game_State : public State {
 public:
-    Game_State();
+    Game_State(std::string level_file);
 
     shared_ptr<State> update(sf::Time dt) override;
 

@@ -1,0 +1,6 @@
+alien alien.png 120 0.4
+static_entity asteroid.png 0.3 0.8
+static_entity asteroid.png 0.2 0.4
+static_entity asteroid.png 0.5 0.7
+static_entity asteroid.png 0.8 0.4
+

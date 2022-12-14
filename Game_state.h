@@ -12,12 +12,12 @@ public:
     /**
      * Create it.
      */
-    Game_State();
+    Game_State(std::string level_file);
 
     /**
      * Tick all game elements.
      */
-    shared_ptr<State> tick(sf::Time delta) override;
+    shared_ptr<State> update(sf::Time delta) override;
 
     /**
      * Draw all game elements.
