@@ -19,7 +19,8 @@ Game_State::Game_State(std::string level_file) {
      * */
 
     world.add(create_player());
-    // Add a group of aliens
+    
+    // Add a group of aliens and asteroids
     std::ifstream ifs{level_file};
     std::string entity_type;
     std::string sprite_image;
@@ -49,41 +50,17 @@ Game_State::Game_State(std::string level_file) {
     }
 
     /*
-     * Add Aliens in a row:
-     * */
-/*
-    for (int i{1}; i < 8; i++) {
-        world.add(create_alien({float(i*120), width*0.4f}));
-    }*/
-    /*
-     * Add aliens in a diagonal:
-     * */
-
-    /*
-    int coord{1};
-    while (coord <= 4) {
-        world.add(create_alien_v2({float(coord*100), float(coord* 100)}));
-        coord += 1;
-    }
-*/
-    /* Can do a grid pattern as well, but then must handle them colliding with each other.
-    for (int x{1}; x <= 4;  x++) {
-        for (int y{1}; y <= 4; y++) {
-            world.add(create_alien({float(x*100), float(y*100)}));
-        }
-    }
-     */
-
-    /*
      * Add a boss
      * */
     world.add(create_boss({width/2, height/15}));
-
 }
 
 shared_ptr<State> Game_State::update(sf::Time dt) {
 
-   world.update(dt);
+    world.update(dt);
+    if (!world.player_alive) {
+        return make_shared<Menu_State>();
+    }
 
     // Handle pause requests from the user
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))

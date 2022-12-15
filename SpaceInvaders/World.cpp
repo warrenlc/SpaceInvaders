@@ -5,8 +5,8 @@
 #include "World.h"
 #include "Global_Values.h"
 
+#include <algorithm>
 #include <iostream>
-
 
 
 void World::update(sf::Time dt) {
@@ -19,13 +19,22 @@ void World::update(sf::Time dt) {
             entities.erase(entities.begin() + i);
             i--;
         }
-     /*   if (entities[i]->type == Tag::player) {
-            player_alive = true;
-        }*/
     }
-   /* if (!player_alive) {
-        return false;
-    }*/
+    
+    auto is_player = [](shared_ptr<Entity> e){ return e->type == Tag::player; };
+    auto player_found = std::find_if(begin(entities), end(entities), is_player);
+    if (player_found == std::end(entities)) {
+        player_alive = false;
+    }
+//
+ /*   auto is_enemy = [](shared_ptr<Entity> e)
+        { return (e->type == Tag::boss) 
+                    || (e->type == Tag::alien)
+                    || (e->type == Tag::alien_v2) ; };
+    auto enemies_left = std::find_if(begin(entities), end(entities), is_enemy);
+   // if (enemies_left == std::end(entities)) {
+   //     enemies_dead = true;
+  //  }*/
 
 }
 
@@ -33,16 +42,22 @@ void World::render(sf::RenderWindow &window) {
     for (auto &x : entities) {
         x->render(window);
     }
-   /* if (!player_alive) {
-
-        font.loadFromFile("Gameplay.ttf");
-        text.setFont(font);
-        text.setFillColor(sf::Color::Yellow);
-        text.setCharacterSize(45);
-        text.setPosition(100, height/2);
-        ss << "Game Over!\nPress 'Esc' to return to Menu!";
+    if (!player_alive) {
+        std::stringstream ss;
+        ss << "Game Over!\n" 
+        << "You Lost!\nPress 'Esc' " 
+        << "to return to Menu";
         text.setString(ss.str());
         window.draw(text);
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+            ss.flush();
+        }
+        
+    }
+   /* if (player_alive && enemies_dead) {
+        std::stringstream ss;
+        ss << "You Won!\nPress 'Esc' "
+           << "to return to Menu";
     }*/
 }
 

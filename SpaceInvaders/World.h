@@ -17,22 +17,34 @@ class Entity;
 
 using namespace std;
 /**
- *World builds the world with the units that get added and deals with collisions. 
+ * World builds the world with the entities that get added 
+ * and updates the entities. 
  */
 
 class World {
 public:
+
+    World() {
+        font.loadFromFile("Gameplay.ttf");
+        text.setFont(font);
+        text.setFillColor(sf::Color::Yellow);
+        text.setCharacterSize(45);
+        text.setPosition(100, height*0.33);
+    }
+
+    bool player_alive = true;;    
+
     void update(sf::Time dt);
 
     void render(sf::RenderWindow &window);
 
   /**
-     * Add a unit to our world
+     * Add an entity to our world
      * */
     void add(std::shared_ptr<Entity> entity);
 
   /**
-     * A unit checks if another unit collides with itself
+     * An entity checks if another entity collides with itself
      * */
     std::vector<std::shared_ptr<Entity>> collides_with(Entity &me) const;
 private:
@@ -40,10 +52,12 @@ private:
      * We need a vector of all entities in the game
      * */
     std::vector<std::shared_ptr<Entity>> entities;
-    bool player_alive = false;
+    
+    //bool player_alive = true;
+    bool boss_alive = true;
+    bool aliens_alive = true;
     sf::Text text;
     sf::Font font;
-    std::stringstream ss;
 };
 
 
