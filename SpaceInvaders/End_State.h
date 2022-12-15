@@ -14,7 +14,6 @@ public:
      * the constructor.
      * */
     End_State(const shared_ptr<State>& win = nullptr);
-    sf::Window window;
 
     /* 
      * Update this state
@@ -38,6 +37,8 @@ public:
      * */
     using Action = std::function<shared_ptr<State>()>;
     
+    sf::Window window;
+    
     /*
      * Describes a menu entry or "option"
      * */
@@ -53,7 +54,7 @@ public:
     sf::Font font;
     Entry entry;
     bool enter_pressed;
-    sf::Time delay;
+//    sf::Time delay;
 
     /*
      * Maintain our background

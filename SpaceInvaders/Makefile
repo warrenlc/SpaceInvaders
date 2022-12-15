@@ -417,30 +417,6 @@ Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
-Random.o: Random.cpp.o
-.PHONY : Random.o
-
-# target to build an object file
-Random.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/Random.cpp.o
-.PHONY : Random.cpp.o
-
-Random.i: Random.cpp.i
-.PHONY : Random.i
-
-# target to preprocess a source file
-Random.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/Random.cpp.i
-.PHONY : Random.cpp.i
-
-Random.s: Random.cpp.s
-.PHONY : Random.s
-
-# target to generate assembly for a file
-Random.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/Random.cpp.s
-.PHONY : Random.cpp.s
-
 Shooting.o: Shooting.cpp.o
 .PHONY : Shooting.o
 
@@ -678,9 +654,6 @@ help:
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
-	@echo "... Random.o"
-	@echo "... Random.i"
-	@echo "... Random.s"
 	@echo "... Shooting.o"
 	@echo "... Shooting.i"
 	@echo "... Shooting.s"

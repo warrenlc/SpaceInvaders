@@ -12,7 +12,8 @@
 
 using namespace std;
 /**
- *Lives is a component that gives the attribute to handle the amount of lives entities have. 
+ *Lives is a component that gives the attribute to 
+ handle the amount of lives entities have. 
  */
 
 class Lives : public Component {
@@ -21,10 +22,8 @@ public:
     bool update(sf::Time dt, Entity &entity, World &world);
 
 private:
-   // int life;
     Tag type;
     sf::Clock counter;
-
 };
 
 

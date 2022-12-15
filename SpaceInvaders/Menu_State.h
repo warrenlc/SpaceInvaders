@@ -11,8 +11,8 @@
 class Menu_State : public State {
 public:
   /**
-     * A pointer to a menu state. In Menu state we can quit
-     * or resume. Resume initialised to nullptr
+     * In Menu state we can quit or resume. 
+     * Resume initialised to nullptr
      * */
     Menu_State(const shared_ptr<State>& resume = nullptr);
 
@@ -72,7 +72,7 @@ private:
     sf::Time delay;
 
     /*
-     * What our menu background will be
+     * Keep track of the game background.
      * */
     shared_ptr<State> background;
     /*

@@ -4,7 +4,7 @@
 #include <sstream>
 
 End_State::End_State(const shared_ptr<State>& win)
-    : enter_pressed(false), delay(sf::milliseconds(100)) {
+    : enter_pressed(false){ //, delay(sf::milliseconds(100)) {
     font.loadFromFile("Gameplay.ttf");
 
 

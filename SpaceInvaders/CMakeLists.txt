@@ -31,8 +31,6 @@ set(SOURCE_FILES
     Movable.h
     Player.cpp
     Player.h
-    Random.cpp
-    Random.h
     Shooting.cpp
     Shooting.h
     State.cpp

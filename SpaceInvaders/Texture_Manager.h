@@ -6,6 +6,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <map>
+
 /*
  * Manages our textures, so they are loaded only once.
  * */
@@ -18,7 +19,7 @@ public:
     static sf::Texture *get(const string &name);
 
 private:
-    // Can't load textures anywhere else
+    
     Texture_Manager() = default;
     /*
     * We want only one instance of this class

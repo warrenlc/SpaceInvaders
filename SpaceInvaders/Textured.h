@@ -8,18 +8,14 @@
 #include "Component.h"
 
 
-using namespace std;
-/*
- * This file is allocetion of various components
- * that deal with visual elements of the game.
- * */
 /**
- *Textured is a component that deals with visual elements of the game. 
+ * Textured is a component for entities that
+ * have a 'texture' (image). 
  */
 
 class Textured : public Component {
 public:
-    Textured(const string& texture_name);
+    Textured(const std::string& texture_name);
 
     void added(Entity &e) override;
     void render(sf::RenderWindow &window, Entity &e) override;

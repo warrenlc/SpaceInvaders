@@ -15,7 +15,9 @@
 
 const sf::Vector2f start_position{width/2, height - 50};
 
-
+/*
+ * Create our player, add components
+ * */
 std::shared_ptr<Entity> create_player() {
     std::shared_ptr<Entity> e = std::make_shared<Entity>(start_position, "player.png");
     e->type = Tag::player;

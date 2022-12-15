@@ -7,7 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <cmath>
-#include<memory>
+#include <memory>
 
 #include "Entity.h"
 #include "Global_Values.h"
@@ -15,11 +15,12 @@
 
 class Entity;
 
-using namespace std;
 /**
  * World builds the world with the entities that get added 
  * and updates the entities. 
  */
+
+//using namespace std;
 
 class World {
 public:

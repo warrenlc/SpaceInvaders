@@ -6,7 +6,11 @@
 #include "Textured.h"
 #include "Collides.h"
 
+using namespace std;
 
+/*
+ * Static Entity is an entity without movement
+ * */
 std::shared_ptr<Entity> create_static_entity(sf::Vector2f start_position, std::string image) {
     std::shared_ptr<Entity> e = std::make_shared<Entity>(sf::Vector2f{start_position}, image);
     e->type = Tag::static_entity;

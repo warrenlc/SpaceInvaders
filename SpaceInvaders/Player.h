@@ -8,4 +8,5 @@
 #include "Entity.h"
 
 std::shared_ptr<Entity> create_player();
+
 #endif // UNTITLED3_PLAYER_H

@@ -50,13 +50,6 @@ private:
     float margin;
 };
 
-/*
-class Remove_After_Impact : public Component {
-public:
-    Remove_After_Impact() = default;
-    bool update(sf::Time time, Entity &e, World &world) override;
-};
-*/
 
 /**
  * Component for sideways movement of entities

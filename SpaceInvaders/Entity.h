@@ -59,19 +59,22 @@ public:
     sf::Vector2f size; 
     Tag type;
     int life;
+
   /**
    *An entity must be updated
    */
+  
     bool update(sf::Time dt, World &world);
   /**
    * An entity must be drawn
    */
+    
     void render(sf::RenderWindow &window);
   /**
    *We add components to an entity
    */
+    
     void add(std::shared_ptr<Component> c); 
-    void set_life(int);
 
     float get_top();
     float get_bottom();

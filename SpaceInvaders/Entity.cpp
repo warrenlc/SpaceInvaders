@@ -5,6 +5,7 @@
 #include "Entity.h"
 #include "Component.h"
 
+
 bool Entity::update(sf::Time dt, World &world) {
     bool alive = true;
     for (auto &x : components) {
@@ -19,7 +20,7 @@ void Entity::render(sf::RenderWindow &window) {
     }
 }
 
-void Entity::add(shared_ptr<Component> component) {
+void Entity::add(std::shared_ptr<Component> component) {
     component->added(*this);
     components.push_back(std::move(component));
 }
@@ -40,7 +41,4 @@ float Entity::get_right() {
     return center.x + (size.x / 2);
 }
 
-//void Entity::set_life(int l) { life = l; }
-
-//int Entity::get_life() { return life; }
 

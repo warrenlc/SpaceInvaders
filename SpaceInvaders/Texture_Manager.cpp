@@ -7,6 +7,7 @@
 
 using namespace std;
 
+
 sf::Texture *Texture_Manager::get(const string &name) {
     auto found = instance.textures.find(name);
     if (found != instance.textures.end()) {

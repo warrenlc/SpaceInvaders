@@ -8,6 +8,11 @@
 #include "Collides.h"
 #include "Lives.h"
 
+#include <memory>
+
+using namespace std;
+
+
 std::shared_ptr<Entity> create_alien(sf::Vector2f start_position, std::string image) {
     std::shared_ptr<Entity> e = std::make_shared<Entity>(sf::Vector2f {start_position}, image);
     e->type = Tag::alien;

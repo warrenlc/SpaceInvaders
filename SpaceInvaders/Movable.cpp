@@ -51,11 +51,6 @@ bool Remove_Outside::update(sf::Time, Entity &entity, World &world) {
     return true;
 }
 
-/*
-bool Remove_After_Impact::update(sf::Time, Entity &entity, World &world) {
-    if (w)
-}
-*/
 
 void Sideways_Movement::rebound_sides() {
     direction_x = -direction_x;

@@ -36,7 +36,6 @@ std::shared_ptr<Entity> create_alien_missile(Entity &enemy) {
     e->add(make_shared<Textured>(e->image_file));
     e->add(make_shared<Vertical_Movement>(200.f, 1.8f));
     e->add(make_shared<Remove_Outside>());
-    //e->add(make_shared<Collides>(Tag::player));
     e->add(make_shared<Collides>(Tag::static_entity));
     e->add(make_shared<Lives>(Tag::alien_missile));
     return e;
@@ -50,7 +49,6 @@ std::shared_ptr<Entity> create_boss_missile(Entity &boss) {
     e->life = 1;
     e->add(make_shared<Textured>(e->image_file));
     e->add(make_shared<Vertical_Movement>(600.f, 1.8f));
-    //e->add(make_shared<Collides>(Tag::player));
     e->add(make_shared<Collides>(Tag::static_entity));
     e->add(make_shared<Remove_Outside>());
     e->add(make_shared<Lives>(Tag::boss_missile));
