@@ -26,15 +26,15 @@ void World::update(sf::Time dt) {
     if (player_found == std::end(entities)) {
         player_alive = false;
     }
-//
- /*   auto is_enemy = [](shared_ptr<Entity> e)
+
+    auto is_enemy = [](shared_ptr<Entity> e)
         { return (e->type == Tag::boss) 
                     || (e->type == Tag::alien)
                     || (e->type == Tag::alien_v2) ; };
     auto enemies_left = std::find_if(begin(entities), end(entities), is_enemy);
-   // if (enemies_left == std::end(entities)) {
-   //     enemies_dead = true;
-  //  }*/
+    if (enemies_left == std::end(entities)) {
+        enemies_alive = false;
+    }
 
 }
 
@@ -42,23 +42,6 @@ void World::render(sf::RenderWindow &window) {
     for (auto &x : entities) {
         x->render(window);
     }
-    if (!player_alive) {
-        std::stringstream ss;
-        ss << "Game Over!\n" 
-        << "You Lost!\nPress 'Esc' " 
-        << "to return to Menu";
-        text.setString(ss.str());
-        window.draw(text);
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
-            ss.flush();
-        }
-        
-    }
-   /* if (player_alive && enemies_dead) {
-        std::stringstream ss;
-        ss << "You Won!\nPress 'Esc' "
-           << "to return to Menu";
-    }*/
 }
 
 void World::add(std::shared_ptr<Entity> entity) {

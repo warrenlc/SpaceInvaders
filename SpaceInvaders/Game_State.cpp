@@ -4,6 +4,7 @@
 
 #include "Game_State.h"
 #include "Menu_State.h"
+#include "End_State.h"
 #include "Player.h"
 #include "Alien.h"
 #include "Boss.h"
@@ -59,7 +60,10 @@ shared_ptr<State> Game_State::update(sf::Time dt) {
 
     world.update(dt);
     if (!world.player_alive) {
-        return make_shared<Menu_State>();
+        return make_shared<End_State>();
+    }
+    if (world.player_alive && !world.enemies_alive) {
+        return make_shared<End_State>(shared_from_this());
     }
 
     // Handle pause requests from the user

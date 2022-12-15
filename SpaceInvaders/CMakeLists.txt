@@ -13,6 +13,8 @@ set(SOURCE_FILES
     Collides.h
     Component.cpp
     Component.h
+    End_State.cpp
+    End_State.h
     Entity.cpp
     Entity.h
     Game_State.cpp

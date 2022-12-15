@@ -32,8 +32,8 @@ public:
         text.setPosition(100, height*0.33);
     }
 
-    bool player_alive = true;;    
-
+    bool player_alive = true;
+    bool enemies_alive = true;
     void update(sf::Time dt);
 
     void render(sf::RenderWindow &window);
@@ -52,10 +52,6 @@ private:
      * We need a vector of all entities in the game
      * */
     std::vector<std::shared_ptr<Entity>> entities;
-    
-    //bool player_alive = true;
-    bool boss_alive = true;
-    bool aliens_alive = true;
     sf::Text text;
     sf::Font font;
 };
