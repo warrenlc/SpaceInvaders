@@ -7,6 +7,12 @@
 
 #include "Entity.h"
 
+/*
+ * Creates an alien Entity with given
+ * start position and image file for
+ * creating the sprite.
+ * */
+
 std::shared_ptr<Entity> create_alien(sf::Vector2f start_position, std::string image);
 std::shared_ptr<Entity> create_alien_v2(sf::Vector2f start_position, std::string image);
 

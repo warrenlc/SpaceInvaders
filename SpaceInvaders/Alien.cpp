@@ -2,7 +2,6 @@
 // Created by warcr on 2022-12-10.
 //
 #include "Alien.h"
-#include <SFML/Graphics.hpp>
 #include "Textured.h"
 #include "Movable.h"
 #include "Missile.h"

@@ -7,7 +7,9 @@
 
 #include "Component.h"
 /**
- *Collides check if components collide with each other. 
+ * Collides is a component for 
+ * giving entities the property of 
+ * being able to collide with one another.
  */
 
 class Collides : public Component{

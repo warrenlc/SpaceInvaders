@@ -11,7 +11,7 @@
 class Entity;
 class World;
 /**
- *Component is an attribute to an entity.
+ * A Component is an attribute to an entity.
  */
 
 class Component {
