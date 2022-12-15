@@ -18,7 +18,7 @@ public:
     /* 
      * Update this state
      * */
-    shared_ptr<State> update(sf::Time dt) override;
+    shared_ptr<State> update(sf::Time) override;
     
     /*
      * Take action on a key press
@@ -35,6 +35,8 @@ public:
     /*
      * The action to take
      * */
+
+    bool won;
     using Action = std::function<shared_ptr<State>()>;
     
     sf::Window window;
@@ -51,10 +53,11 @@ public:
     /*
      * For style and rendering
      * */
+    sf::Text headline;
+
     sf::Font font;
     Entry entry;
     bool enter_pressed;
-//    sf::Time delay;
 
     /*
      * Maintain our background
@@ -66,5 +69,5 @@ public:
      * to Menu_States ability for several options
      * */
     void set_entry(const string& text, Action action);
-    
+
 };

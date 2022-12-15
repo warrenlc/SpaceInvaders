@@ -21,7 +21,7 @@ std::shared_ptr<Entity> create_alien(sf::Vector2f start_position, std::string im
     e->add(make_shared<Perimeter_Movement>(750.f, 200, 400, 50, 900));
     e->add(make_shared<Missile_Spawner>(sf::milliseconds(1900), &create_alien_missile));
     e->add(make_shared<Collides>(Tag::player_missile));
-    e->add(make_shared<Lives>(Tag::alien));
+    e->add(make_shared<Lives>());
     return e;
 }
 
@@ -33,6 +33,6 @@ std::shared_ptr<Entity> create_alien_v2(sf::Vector2f start_position, std::string
     e->add(make_shared<Perimeter_Movement>(1200.f, 150, 350, 50, 900));
     e->add(make_shared<Missile_Spawner>(sf::milliseconds(1600), &create_alien_missile));
     e->add(make_shared<Collides>(Tag::player_missile));
-    e->add(make_shared<Lives>(Tag::alien_v2));
+    e->add(make_shared<Lives>());
     return e;
 }

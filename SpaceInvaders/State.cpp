@@ -7,8 +7,8 @@ State::State()= default;
 
 State::~State()= default;
 
-void State::on_key_press(sf::Keyboard::Key key) {}
-void State::on_key_release(sf::Keyboard::Key key) {}
+void State::on_key_press(sf::Keyboard::Key) {}
+void State::on_key_release(sf::Keyboard::Key) {}
 void State::run(sf::RenderWindow &window, shared_ptr<State> state) {
     sf::Clock clock;
 

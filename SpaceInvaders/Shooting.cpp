@@ -8,7 +8,7 @@
 Player_Shooting::Player_Shooting()
 : shooting_clock{} {}
 
-bool Player_Shooting::update(sf::Time dt, Entity &e, World &world) {
+bool Player_Shooting::update(sf::Time, Entity &e, World &world) {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
         && shooting_clock.getElapsedTime().asMilliseconds() >= 400) {
             world.add(create_player_missile(e));

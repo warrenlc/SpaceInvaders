@@ -63,7 +63,7 @@ std::vector<std::shared_ptr<Entity>> World::collides_with(Entity &me) const {
 
     for (auto &x: entities) {
         if (x.get() == &me) {
-            continue; // A unit cannot collide with itself
+            continue; // An entity cannot collide with itself
         }
         if (collides(*x, me)) {
             result.push_back(x);

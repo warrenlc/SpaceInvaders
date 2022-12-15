@@ -7,7 +7,7 @@
 #include "Global_Values.h"
 #include <iostream>
 
-const int margin(Entity &e) { return (e.size.x/2) + 5; }
+int margin(Entity &e) { return (e.size.x/2) + 5; }
 
 Player_Movement::Player_Movement(float speed)
 :speed{speed} {}
@@ -25,7 +25,7 @@ sf::Vector2f find_direction() {
     return direction;
 }
 
-bool Player_Movement::update(sf::Time dt, Entity &entity, World &world) {
+bool Player_Movement::update(sf::Time dt, Entity &entity, World&) {
 
     sf::Vector2f direction = find_direction();
     entity.center += direction * speed * dt.asSeconds();
@@ -38,7 +38,7 @@ bool Player_Movement::update(sf::Time dt, Entity &entity, World &world) {
     return true;
 }
 
-bool Remove_Outside::update(sf::Time, Entity &entity, World &world) {
+bool Remove_Outside::update(sf::Time, Entity &entity, World&) {
     if (entity.type != Tag::player) {
         if (entity.center.y < margin) {
             return false;
@@ -56,7 +56,7 @@ void Sideways_Movement::rebound_sides() {
     direction_x = -direction_x;
 }
 
-bool Sideways_Movement::update(sf::Time dt, Entity &entity, World &world) {
+bool Sideways_Movement::update(sf::Time dt, Entity &entity, World&) {
     // Entity moving sideways cannot be moved outside the screen
 
     entity.center.x += direction_x * speed * dt.asMicroseconds() / 1000000.0f;
@@ -74,25 +74,27 @@ bool Sideways_Movement::update(sf::Time dt, Entity &entity, World &world) {
     return true;
 }
 
-bool Vertical_Movement::update(sf::Time dt, Entity &e, World &world) {
+bool Vertical_Movement::update(sf::Time dt, Entity &e, World&) {
     e.center.y += direction_y * speed * dt.asSeconds();
     return true;
 }
 
-Perimeter_Movement::Perimeter_Movement(float speed, float upper_b, float lower_b, float left_b, float right_b)
-        : speed{speed}
-        , direction_x{direction_x = .38f}
+Perimeter_Movement::Perimeter_Movement(float speed, 
+        float upper_b, float lower_b, float left_b, float right_b)
+        //: speed{speed}
+        : direction_x{direction_x = .38f}
         , direction_y{direction_y = -.38f}
         , is_moving_right{is_moving_right = true}
         , is_moving_down{is_moving_down = false}
         , is_moving_left{is_moving_left = false}
         , is_moving_up{is_moving_up = false}
+        , speed{speed}
         , upper_b{upper_b}
         , lower_b{lower_b}
         , left_b{left_b}
         , right_b{right_b} {}
 
-bool Perimeter_Movement::update(sf::Time dt, Entity &entity, World &world) {
+bool Perimeter_Movement::update(sf::Time dt, Entity &entity, World&) {
     if (is_moving_right) {
         entity.center.x +=
                 direction_x *

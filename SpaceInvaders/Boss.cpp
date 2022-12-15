@@ -16,6 +16,6 @@ std::shared_ptr<Entity> create_boss(sf::Vector2f start_position) {
     e->add(make_shared<Sideways_Movement>(550.f));
     e->add(make_shared<Missile_Spawner>(sf::seconds(2), &create_boss_missile));
     e->add(make_shared<Collides>(Tag::player_missile));
-    e->add(make_shared<Lives>(Tag::boss));
+    e->add(make_shared<Lives>());
     return e;
 }

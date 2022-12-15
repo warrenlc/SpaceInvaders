@@ -18,11 +18,10 @@ using namespace std;
 
 class Lives : public Component {
 public:
-    Lives(Tag type);
-    bool update(sf::Time dt, Entity &entity, World &world);
+    Lives();
+    bool update(sf::Time dt, Entity &entity, World &world) override;
 
 private:
-    Tag type;
     sf::Clock counter;
 };
 

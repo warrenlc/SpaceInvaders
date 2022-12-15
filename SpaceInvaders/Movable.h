@@ -16,7 +16,7 @@
  * in our game.
  * */
 
-const int margin(Entity &e);
+int margin(Entity &e);
 
 /**
  *Component for movement of the player. 
@@ -28,7 +28,7 @@ public:
      * */
     Player_Movement(float speed);
 
-    bool update(sf::Time time, Entity &e, World &world) override;
+    bool update(sf::Time time, Entity &e, World &) override;
 
 private:
     float speed;
@@ -44,7 +44,7 @@ class Remove_Outside : public Component {
 public:
     Remove_Outside(float margin = 0.1f) : margin{margin} {}
 
-    bool update(sf::Time time, Entity &e, World &world) override;
+    bool update(sf::Time time, Entity &e, World&) override;
 
 private:
     float margin;
@@ -63,7 +63,7 @@ public:
 
     void rebound_sides();
 
-    bool update(sf::Time, Entity &e, World &world) override;
+    bool update(sf::Time, Entity &e, World &) override;
 
 private:
     float speed;
@@ -80,7 +80,7 @@ public:
     Vertical_Movement(float speed, float direction_y)
     : speed{speed}, direction_y{direction_y} {}
 
-    bool update(sf::Time, Entity &e, World &world) override;
+    bool update(sf::Time, Entity &e, World&) override;
 
 private:
     float speed;
@@ -94,24 +94,24 @@ private:
 class Perimeter_Movement : public Component {
 public:
     Perimeter_Movement(float speed, float upper_b, float lower_b, float left_b, float right_b);
-    bool update(sf::Time, Entity &e, World &world) override;
+    bool update(sf::Time, Entity &e, World&) override;
     void move_down(Entity &e);
     void move_right(Entity&);
     void move_left(Entity&);
     void move_up(Entity&);
 
 private:
-    float speed;
     float direction_x;
     float direction_y;
-    float upper_b;
-    float lower_b;
-    float left_b;
-    float right_b;
     bool is_moving_right;
     bool is_moving_down;
     bool is_moving_left;
     bool is_moving_up;
+    float speed;
+    float upper_b;
+    float lower_b;
+    float left_b;
+    float right_b;
 
 };
 

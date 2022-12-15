@@ -17,8 +17,8 @@
 class Statistics : public Component {
 public:
     Statistics(std::string font_file);
-    bool update(sf::Time, Entity &e, World &world) override;
-    void render(sf::RenderWindow&, Entity &e) override;
+    bool update(sf::Time, Entity &e, World&) override;
+    void render(sf::RenderWindow&, Entity&) override;
 
 private:
     std::string font_file;

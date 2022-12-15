@@ -17,13 +17,13 @@ Statistics::Statistics(std::string font_file)
     stats.setPosition(20, 20);
 }
 
-bool Statistics::update(sf::Time, Entity &me, World &world) {
+bool Statistics::update(sf::Time, Entity &me, World&) {
     std::stringstream ss;
     ss << "Lives left: " << me.life;
     stats.setString(ss.str());
     return true;
 }
 
-void Statistics::render(sf::RenderWindow &window, Entity &entity) {
+void Statistics::render(sf::RenderWindow &window, Entity&) {
     window.draw(stats);
 }
