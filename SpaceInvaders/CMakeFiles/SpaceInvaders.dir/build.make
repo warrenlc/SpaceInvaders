@@ -125,10 +125,24 @@ CMakeFiles/SpaceInvaders.dir/Component.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Component.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/warrencrutcher/Games/temp_SpaceInvaders/Component.cpp -o CMakeFiles/SpaceInvaders.dir/Component.cpp.s
 
+CMakeFiles/SpaceInvaders.dir/End_State.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
+CMakeFiles/SpaceInvaders.dir/End_State.cpp.o: End_State.cpp
+CMakeFiles/SpaceInvaders.dir/End_State.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpaceInvaders.dir/End_State.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/End_State.cpp.o -MF CMakeFiles/SpaceInvaders.dir/End_State.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/End_State.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/End_State.cpp
+
+CMakeFiles/SpaceInvaders.dir/End_State.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/End_State.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/warrencrutcher/Games/temp_SpaceInvaders/End_State.cpp > CMakeFiles/SpaceInvaders.dir/End_State.cpp.i
+
+CMakeFiles/SpaceInvaders.dir/End_State.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/End_State.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/warrencrutcher/Games/temp_SpaceInvaders/End_State.cpp -o CMakeFiles/SpaceInvaders.dir/End_State.cpp.s
+
 CMakeFiles/SpaceInvaders.dir/Entity.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Entity.cpp.o: Entity.cpp
 CMakeFiles/SpaceInvaders.dir/Entity.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpaceInvaders.dir/Entity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SpaceInvaders.dir/Entity.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Entity.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Entity.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Entity.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Entity.cpp
 
 CMakeFiles/SpaceInvaders.dir/Entity.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/SpaceInvaders.dir/Entity.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o: Game_State.cpp
 CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Game_State.cpp
 
 CMakeFiles/SpaceInvaders.dir/Game_State.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/SpaceInvaders.dir/Game_State.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Lives.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Lives.cpp.o: Lives.cpp
 CMakeFiles/SpaceInvaders.dir/Lives.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SpaceInvaders.dir/Lives.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpaceInvaders.dir/Lives.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Lives.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Lives.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Lives.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Lives.cpp
 
 CMakeFiles/SpaceInvaders.dir/Lives.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/SpaceInvaders.dir/Lives.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/main.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/main.cpp.o: main.cpp
 CMakeFiles/SpaceInvaders.dir/main.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpaceInvaders.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpaceInvaders.dir/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/main.cpp.o -MF CMakeFiles/SpaceInvaders.dir/main.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/main.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/main.cpp
 
 CMakeFiles/SpaceInvaders.dir/main.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o: Menu_State.cpp
 CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Menu_State.cpp
 
 CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/SpaceInvaders.dir/Menu_State.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Missile.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Missile.cpp.o: Missile.cpp
 CMakeFiles/SpaceInvaders.dir/Missile.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpaceInvaders.dir/Missile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpaceInvaders.dir/Missile.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Missile.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Missile.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Missile.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Missile.cpp
 
 CMakeFiles/SpaceInvaders.dir/Missile.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/SpaceInvaders.dir/Missile.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Movable.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Movable.cpp.o: Movable.cpp
 CMakeFiles/SpaceInvaders.dir/Movable.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpaceInvaders.dir/Movable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpaceInvaders.dir/Movable.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Movable.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Movable.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Movable.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Movable.cpp
 
 CMakeFiles/SpaceInvaders.dir/Movable.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/SpaceInvaders.dir/Movable.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Player.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Player.cpp.o: Player.cpp
 CMakeFiles/SpaceInvaders.dir/Player.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpaceInvaders.dir/Player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SpaceInvaders.dir/Player.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Player.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Player.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Player.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Player.cpp
 
 CMakeFiles/SpaceInvaders.dir/Player.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/SpaceInvaders.dir/Player.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Random.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Random.cpp.o: Random.cpp
 CMakeFiles/SpaceInvaders.dir/Random.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SpaceInvaders.dir/Random.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceInvaders.dir/Random.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Random.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Random.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Random.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Random.cpp
 
 CMakeFiles/SpaceInvaders.dir/Random.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/SpaceInvaders.dir/Random.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o: Shooting.cpp
 CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Shooting.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Shooting.cpp
 
 CMakeFiles/SpaceInvaders.dir/Shooting.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/SpaceInvaders.dir/Shooting.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/State.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/State.cpp.o: State.cpp
 CMakeFiles/SpaceInvaders.dir/State.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceInvaders.dir/State.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceInvaders.dir/State.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/State.cpp.o -MF CMakeFiles/SpaceInvaders.dir/State.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/State.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/State.cpp
 
 CMakeFiles/SpaceInvaders.dir/State.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/SpaceInvaders.dir/State.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o: Static_Entity.cpp
 CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Static_Entity.cpp
 
 CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/SpaceInvaders.dir/Static_Entity.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o: Statistics.cpp
 CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Statistics.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Statistics.cpp
 
 CMakeFiles/SpaceInvaders.dir/Statistics.cpp.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/SpaceInvaders.dir/Statistics.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o: Texture_Manager.cpp
 CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Texture_Manager.cpp
 
 CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.i: cmake_force
@@ -324,7 +338,7 @@ CMakeFiles/SpaceInvaders.dir/Texture_Manager.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Textured.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Textured.cpp.o: Textured.cpp
 CMakeFiles/SpaceInvaders.dir/Textured.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/SpaceInvaders.dir/Textured.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/SpaceInvaders.dir/Textured.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/Textured.cpp.o -MF CMakeFiles/SpaceInvaders.dir/Textured.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/Textured.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/Textured.cpp
 
 CMakeFiles/SpaceInvaders.dir/Textured.cpp.i: cmake_force
@@ -338,7 +352,7 @@ CMakeFiles/SpaceInvaders.dir/Textured.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/World.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/World.cpp.o: World.cpp
 CMakeFiles/SpaceInvaders.dir/World.cpp.o: CMakeFiles/SpaceInvaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/SpaceInvaders.dir/World.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/SpaceInvaders.dir/World.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceInvaders.dir/World.cpp.o -MF CMakeFiles/SpaceInvaders.dir/World.cpp.o.d -o CMakeFiles/SpaceInvaders.dir/World.cpp.o -c /Users/warrencrutcher/Games/temp_SpaceInvaders/World.cpp
 
 CMakeFiles/SpaceInvaders.dir/World.cpp.i: cmake_force
@@ -355,6 +369,7 @@ SpaceInvaders_OBJECTS = \
 "CMakeFiles/SpaceInvaders.dir/Boss.cpp.o" \
 "CMakeFiles/SpaceInvaders.dir/Collides.cpp.o" \
 "CMakeFiles/SpaceInvaders.dir/Component.cpp.o" \
+"CMakeFiles/SpaceInvaders.dir/End_State.cpp.o" \
 "CMakeFiles/SpaceInvaders.dir/Entity.cpp.o" \
 "CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o" \
 "CMakeFiles/SpaceInvaders.dir/Lives.cpp.o" \
@@ -379,6 +394,7 @@ SpaceInvaders: CMakeFiles/SpaceInvaders.dir/Alien.cpp.o
 SpaceInvaders: CMakeFiles/SpaceInvaders.dir/Boss.cpp.o
 SpaceInvaders: CMakeFiles/SpaceInvaders.dir/Collides.cpp.o
 SpaceInvaders: CMakeFiles/SpaceInvaders.dir/Component.cpp.o
+SpaceInvaders: CMakeFiles/SpaceInvaders.dir/End_State.cpp.o
 SpaceInvaders: CMakeFiles/SpaceInvaders.dir/Entity.cpp.o
 SpaceInvaders: CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o
 SpaceInvaders: CMakeFiles/SpaceInvaders.dir/Lives.cpp.o
@@ -401,7 +417,7 @@ SpaceInvaders: /usr/local/lib/libsfml-graphics.2.5.1.dylib
 SpaceInvaders: /usr/local/lib/libsfml-window.2.5.1.dylib
 SpaceInvaders: /usr/local/lib/libsfml-system.2.5.1.dylib
 SpaceInvaders: CMakeFiles/SpaceInvaders.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable SpaceInvaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/warrencrutcher/Games/temp_SpaceInvaders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable SpaceInvaders"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SpaceInvaders.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

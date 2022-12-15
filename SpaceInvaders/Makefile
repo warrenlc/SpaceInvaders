@@ -225,6 +225,30 @@ Component.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/Component.cpp.s
 .PHONY : Component.cpp.s
 
+End_State.o: End_State.cpp.o
+.PHONY : End_State.o
+
+# target to build an object file
+End_State.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/End_State.cpp.o
+.PHONY : End_State.cpp.o
+
+End_State.i: End_State.cpp.i
+.PHONY : End_State.i
+
+# target to preprocess a source file
+End_State.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/End_State.cpp.i
+.PHONY : End_State.cpp.i
+
+End_State.s: End_State.cpp.s
+.PHONY : End_State.s
+
+# target to generate assembly for a file
+End_State.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/End_State.cpp.s
+.PHONY : End_State.cpp.s
+
 Entity.o: Entity.cpp.o
 .PHONY : Entity.o
 
@@ -630,6 +654,9 @@ help:
 	@echo "... Component.o"
 	@echo "... Component.i"
 	@echo "... Component.s"
+	@echo "... End_State.o"
+	@echo "... End_State.i"
+	@echo "... End_State.s"
 	@echo "... Entity.o"
 	@echo "... Entity.i"
 	@echo "... Entity.s"

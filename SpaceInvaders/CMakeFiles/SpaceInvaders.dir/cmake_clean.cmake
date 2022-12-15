@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/Collides.cpp.o.d"
   "CMakeFiles/SpaceInvaders.dir/Component.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/Component.cpp.o.d"
+  "CMakeFiles/SpaceInvaders.dir/End_State.cpp.o"
+  "CMakeFiles/SpaceInvaders.dir/End_State.cpp.o.d"
   "CMakeFiles/SpaceInvaders.dir/Entity.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/Entity.cpp.o.d"
   "CMakeFiles/SpaceInvaders.dir/Game_State.cpp.o"
