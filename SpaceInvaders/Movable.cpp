@@ -81,18 +81,26 @@ bool Vertical_Movement::update(sf::Time dt, Entity &e, World&) {
 
 Perimeter_Movement::Perimeter_Movement(float speed, 
         float upper_b, float lower_b, float left_b, float right_b)
-        //: speed{speed}
-        : direction_x{direction_x = .38f}
-        , direction_y{direction_y = -.38f}
-        , is_moving_right{is_moving_right = true}
-        , is_moving_down{is_moving_down = false}
-        , is_moving_left{is_moving_left = false}
-        , is_moving_up{is_moving_up = false}
+        : direction_x{direction_x}
+        , direction_y{direction_y}
+        , is_moving_right{is_moving_right}
+        , is_moving_down{is_moving_down}
+        , is_moving_left{is_moving_left}
+        , is_moving_up{is_moving_up}
         , speed{speed}
         , upper_b{upper_b}
         , lower_b{lower_b}
         , left_b{left_b}
-        , right_b{right_b} {}
+        , right_b{right_b} 
+{
+    direction_x = 0.38f;
+    direction_y = -0.38f;
+    is_moving_right = true;
+    is_moving_down = false;
+    is_moving_left = false;
+    is_moving_up = false;
+    
+}
 
 bool Perimeter_Movement::update(sf::Time dt, Entity &entity, World&) {
     if (is_moving_right) {

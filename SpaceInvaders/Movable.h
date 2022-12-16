@@ -58,8 +58,12 @@ class Sideways_Movement : public Component {
 public:
     Sideways_Movement(float speed)
     : speed{speed}
-    , direction_x{direction_x = .38f}
-    , is_moving_right{is_moving_right = true} {}
+    , direction_x{direction_x}
+    , is_moving_right{is_moving_right} 
+{
+    direction_x = 0.38f;
+    is_moving_right = true;
+}
 
     void rebound_sides();
 

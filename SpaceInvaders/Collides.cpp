@@ -19,9 +19,9 @@ bool Collides::update(sf::Time dt, Entity &entity, World &world) {
         if (collision->type == collides_with) {
            damage_visible = sf::milliseconds(900);
             hit = true;
-            if ((collision->type == Tag::static_entity && entity.type == Tag::boss_missile)
-                || (collision->type == Tag::static_entity && entity.type == Tag::alien_missile)
-                || collision->type == Tag::static_entity && entity.type == Tag::player_missile) {
+            if (((collision->type == Tag::static_entity) && (entity.type == Tag::boss_missile))
+                || ((collision->type == Tag::static_entity) && (entity.type == Tag::alien_missile))
+                || ((collision->type == Tag::static_entity) && (entity.type == Tag::player_missile))) {
                 return false;
             }
 
